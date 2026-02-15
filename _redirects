@@ -1,0 +1,23 @@
+# Cloudflare Pages redirects
+# Remove .html from URLs for cleaner links
+
+# Individual page redirects
+/things-to-do-when-bored-at-home /things-to-do-when-bored-at-home.html 200
+/things-to-do-when-bored-at-night /things-to-do-when-bored-at-night.html 200
+/things-to-do-when-bored-on-phone /things-to-do-when-bored-on-phone.html 200
+/things-to-do-when-bored-with-friends /things-to-do-when-bored-with-friends.html 200
+/fun-5-minute-activities /fun-5-minute-activities.html 200
+/blog-3am-motivation /blog-3am-motivation.html 200
+/blog-why-we-procrastinate /blog-why-we-procrastinate.html 200
+/blog-weird-subreddits /blog-weird-subreddits.html 200
+/blog-nothing-matters /blog-nothing-matters.html 200
+/about /about.html 200
+/contact /contact.html 200
+/privacy-policy /privacy-policy.html 200
+/terms /terms.html 200
+
+# Blog index
+/blog /blog.html 200
+
+# Root
+/index /BoredomSolver.html 200

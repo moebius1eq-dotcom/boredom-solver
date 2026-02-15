@@ -1,0 +1,16 @@
+# OpenClaw workspace files - don't commit
+AGENTS.md
+SOUL.md
+IDENTITY.md
+TOOLS.md
+USER.md
+memory/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
+*.swp
+*.swo

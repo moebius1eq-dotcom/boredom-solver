@@ -1,0 +1,5 @@
+# BoredomSolver robots.txt
+User-agent: *
+Allow: /
+
+Sitemap: https://boredomsolver.com/sitemap.xml

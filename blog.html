@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - BoredomSolver</title>
+    <meta name="description" content="Read the latest thoughts on boredom, creativity, procrastination, and the art of doing nothing.">
+    <link rel="canonical" href="https://boredomsolver.com/blog.html">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🧩</text></svg>">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Blog - BoredomSolver">
+    <meta property="og:description" content="Read the latest thoughts on boredom, creativity, procrastination, and the art of doing nothing.">
+    <meta property="og:url" content="https://boredomsolver.com/blog.html">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        :root {
+            --accent: #00ff88;
+            --dark: #0a0a0f;
+            --card-bg: #14141f;
+            --light: #fff;
+            --muted: #888;
+        }
+        body { font-family: 'Inter', sans-serif; background: var(--dark); color: var(--light); line-height: 1.6; }
+        
+        .top-bar { display: flex; justify-content: space-between; align-items: center; padding: 15px 20px; background: var(--card-bg); border-bottom: 1px solid #222; }
+        .logo { font-size: 1.3rem; font-weight: 800; color: var(--accent); }
+        .nav-links { display: flex; gap: 15px; }
+        .nav-links a { color: var(--muted); text-decoration: none; font-size: 0.9rem; }
+        .nav-links a:hover { color: var(--accent); }
+        
+        .container { max-width: 900px; margin: 0 auto; padding: 40px 20px; }
+        
+        h1 { font-size: 2.5rem; margin-bottom: 10px; }
+        .subtitle { color: var(--muted); margin-bottom: 40px; }
+        
+        .blog-grid { display: grid; gap: 30px; }
+        
+        .blog-card { background: var(--card-bg); border-radius: 20px; padding: 30px; transition: 0.2s; cursor: pointer; }
+        .blog-card:hover { transform: translateY(-5px); border: 1px solid var(--accent); }
+        .blog-card .emoji { font-size: 3rem; margin-bottom: 15px; }
+        .blog-card h2 { font-size: 1.4rem; margin-bottom: 10px; color: var(--light); }
+        .blog-card .meta { color: var(--muted); font-size: 0.85rem; margin-bottom: 15px; }
+        .blog-card p { color: #aaa; line-height: 1.7; }
+        
+        .read-time { display: inline-block; background: rgba(0,255,136,0.1); color: var(--accent); padding: 5px 12px; border-radius: 15px; font-size: 0.8rem; margin-left: 10px; }
+        
+        .share-section { background: var(--card-bg); border-radius: 20px; padding: 40px; text-align: center; margin-top: 50px; }
+        .share-section h2 { margin-bottom: 15px; }
+        .share-section p { color: var(--muted); margin-bottom: 25px; }
+        
+        .share-form { display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; }
+        .share-form input { padding: 15px 20px; border-radius: 30px; border: 1px solid #333; background: var(--dark); color: white; width: 300px; }
+        .share-form button { background: var(--accent); color: var(--dark); border: none; padding: 15px 30px; border-radius: 30px; font-weight: bold; cursor: pointer; }
+        
+        footer { text-align: center; padding: 40px; color: var(--muted); font-size: 0.85rem; }
+        footer a { color: var(--accent); text-decoration: none; }
+    </style>
+</head>
+<body>
+    <div class="top-bar">
+        <div class="logo">🧩 BoredomSolver</div>
+        <div class="nav-links">
+            <a href="BoredomSolver.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="things-to-do-when-bored-at-home.html">Articles</a>
+        </div>
+    </div>
+    
+    <div class="container">
+        <h1>📝 The Boredom Blog</h1>
+        <p class="subtitle">Thoughts on boredom, creativity, procrastination, and the art of doing nothing useful.</p>
+        
+        <div class="blog-grid">
+            <div class="blog-card" onclick="window.location.href='blog-3am-motivation.html'">
+                <div class="emoji">🌙</div>
+                <h2>The History of the 3 AM Motivation Spike</h2>
+                <p class="meta">📅 Feb 14, 2026 | 🏷️ Psychology | <span class="read-time">⏱️ 5 min read</span></p>
+                <p>Why do we feel most motivated at 3 AM? Explore the psychology behind late-night energy bursts and why boredom fuels creativity. The paradox of the 3 AM inspiration...</p>
+            </div>
+            
+            <div class="blog-card" onclick="window.location.href='blog-why-we-procrastinate.html'">
+                <div class="emoji">⏰</div>
+                <h2>Why Do We Procrastinate? The Science Behind Laziness</h2>
+                <p class="meta">📅 Feb 14, 2026 | 🏷️ Science | <span class="read-time">⏱️ 7 min read</span></p>
+                <p>Procrastination isn't a character flaw—it's your brain trying to protect you. Understanding the science behind why we delay can help us work with our biology instead of against it...</p>
+            </div>
+            
+            <div class="blog-card" onclick="window.location.href='blog-weird-subreddits.html'">
+                <div class="emoji">🤖</div>
+                <h2>The Best Weird Subreddits for Killing Time</h2>
+                <p class="meta">📅 Feb 14, 2026 | 🏷️ Internet | <span class="read-time">⏱️ 4 min read</span></p>
+                <p>A curated list of the strangest, most fascinating corners of Reddit. From Glitches in the Matrix to Backrooms to obscure hobby communities...</p>
+            </div>
+            
+            <div class="blog-card" onclick="window.location.href='blog-nothing-matters.html'">
+                <div class="emoji">🪐</div>
+                <h2>Why Nothing Matters (And That's Okay)</h2>
+                <p class="meta">📅 Feb 14, 2026 | 🏷️ Philosophy | <span class="read-time">⏱️ 6 min read</span></p>
+                <p>Existential nihilism gets a bad rap. In this article, we explore why accepting that nothing matters can actually be incredibly liberating...</p>
+            </div>
+        </div>
+        
+        <div class="share-section">
+            <h2>✍️ Share Your Boredom Story</h2>
+            <p>Have a funny boredom story? Want to share how you waste time? Send it to us!</p>
+            <div class="share-form">
+                <input type="text" id="storyInput" placeholder="Share your story...">
+                <button onclick="submitStory()">Submit</button>
+            </div>
+        </div>
+    </div>
+    
+    <footer>
+        <p>© 2026 BoredomSolver | <a href="BoredomSolver.html">Home</a> | <a href="about.html">About</a> | <a href="privacy-policy.html">Privacy</a></p>
+    </footer>
+    
+    <script>
+        function submitStory() {
+            const story = document.getElementById('storyInput').value;
+            if (story.length < 10) {
+                alert('Please write a bit more!');
+                return;
+            }
+            // In a real app, this would save to a database
+            alert('Thanks for sharing! Your story has been submitted. 🧩');
+            document.getElementById('storyInput').value = '';
+        }
+    </script>
+</body>
+</html>
