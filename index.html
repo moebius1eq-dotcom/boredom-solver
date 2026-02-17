@@ -246,9 +246,10 @@
         <select id="seoDropdown" onchange="showSeoContent(this.value)" style="width: 100%; padding: 15px 20px; font-size: 1.1rem; border-radius: 15px; border: 2px solid var(--accent); background: var(--card-bg); color: var(--light); cursor: pointer; margin-bottom: 20px;">
             <option value="night">😴 What to Do When Bored at Night</option>
             <option value="home">🏠 Things to Do When Bored at Home</option>
-            <option value="teen">👶 What to Do When Bored as a Teenager</option>
             <option value="money">💰 What to Do When Bored and Have No Money</option>
-            <option value="fun">🎮 Fun Things to Do When Bored</option>
+            <option value="teen">👶 What to Do When Bored as a Teenager</option>
+            <option value="lateNight">🌙 Fun Things to Do at 2am</option>
+            <option value="interactive">🎮 Interactive Games & Challenges</option>
         </select>
         
         <div id="seoContent" style="background: var(--card-bg); border-radius: 20px; padding: 25px; min-height: 200px;">
@@ -261,23 +262,27 @@
     const seoData = {
         night: {
             title: "😴 What to Do When Bored at Night",
-            text: "Late night boredom hits different. When you can't sleep and need <strong>things to do at 2am</strong>, we've got you covered. Whether you're lying awake wondering <strong>what to do when you're bored at night</strong>, or looking for <strong>fun things to do at 2am</strong>, these activities don't involve scrolling Instagram until your eyes bleed. Try a Wikipedia spiral, contemplate the universe, or challenge yourself to our brain games. Nighttime is when creativity strikes - embrace the quiet."
+            text: "<p>Late night boredom hits different. When you can't sleep and need <strong>things to do at 2am</strong>, we've got you covered.</p><ul><li>Contemplate the universe and get mildly existential</li><li>Organize your phone photos by color (weirdly satisfying)</li><li>Write a poem so bad it's funny</li><li>Watch YouTube essay videos about random topics</li><li>Try a Wikipedia spiral - click random and see where you end up</li><li>Listen to lo-fi beats and pretend you're in a study session</li></ul>"
         },
         home: {
             title: "🏠 Things to Do When Bored at Home",
-            text: "Stuck inside with nothing to do? Being home bored doesn't have to mean watching Netflix for the third time. From <strong>things to do when bored and alone in your room</strong> to activities for when you're home with friends, we cover every scenario. Try the 'Stay Challenge' - can you actually stay on this website? It's harder than it sounds. Or reorganize your entire phone, learn a useless fact, or start a Google Maps adventure to somewhere you've never been."
-        },
-        teen: {
-            title: "👶 What to Do When Bored as a Teenager",
-            text: "Being a teenager with nothing to do is a special kind of boredom. You've done the TikTok scroll, replied to all your snaps, and now you're just... existing. Whether you're looking for <strong>things to do when bored with friends</strong> or solo activities that don't require money or leaving your room, BoredomSolver speaks your language. Our challenges are perfect for sending to friends, and the 'dare' format fits perfectly with group chats."
+            text: "<p>Being stuck at home doesn't have to be boring. Here's how to kill time without leaving your couch:</p><ul><li>Stare at the clock and watch time pass (oddly hypnotic)</li><li>Sort your apps by color, then size, then regret it</li><li>Read the strangest Amazon 1-star reviews</li><li>Explore Google Maps street view places you'll never visit</li><li>Make playlists for fictional moods you don't have</li><li>Go through old photos and rate them 1-10</li></ul>"
         },
         money: {
             title: "💰 What to Do When Bored and Have No Money",
-            text: "Zero budget? No problem. All our activities are free - because boredom shouldn't cost anything. From <strong>things to do when bored with no money</strong> to creative ways to waste time without spending a dime, we've tested everything. The best things in life are free, and the most boring activities are too - embrace the art of doing absolutely nothing productive. It's genuinely therapeutic."
+            text: "<p>Zero budget? No problem. The best boredom busters are free:</p><ul><li>Challenge yourself to not blink for 60 seconds (you'll fail)</li><li>Learn to juggle with anything—scarves, socks, your phone (carefully)</li><li>Write a text to someone but don't send it (emotional release)</li><li>Make up a new sport with invented rules</li><li>Rate every photo in your camera roll</li><li>Invent conspiracy theories about your houseplants</li></ul>"
         },
-        fun: {
-            title: "🎮 Fun Things to Do When Bored",
-            text: "Looking for <strong>fun things to do when you're bored</strong>? Our random challenge generator creates instant entertainment - send a dare to a friend, try our brain games, or compete on leaderboards. Whether you want chaotic energy or chill vibes, there's something here for every mood. The key to having fun when bored is accepting that sometimes doing nothing is the entire point."
+        teen: {
+            title: "👶 What to Do When Bored as a Teenager",
+            text: "<p>Being a teenager with nothing to do is a universal experience. Here's how to survive:</p><ul><li>Scroll Reddit's most controversial posts</li><li>Create a meme about your exact current situation</li><li>Text your friends weird things and see who responds</li><li>Watch 'try not to laugh' compilations (you will fail)</li><li>Change your profile picture to something random</li><li>Deep dive into obscure Subreddits with under 100 members</li></ul>"
+        },
+        lateNight: {
+            title: "🌙 Fun Things to Do at 2am When You Can't Sleep",
+            text: "<p>2am and wide awake? The world is your oyster (or your oyster of existential dread):</p><ul><li>Listen to lo-fi beats and pretend you're in a study session</li><li>Google 'what would happen if' questions</li><li>Watch cooking videos you'll never cook</li><li>Think about your hypothetical other life in another country</li><li>Look up at the ceiling and name the stains</li><li>Let Spotify's autoplay take you on a musical journey</li></ul>"
+        },
+        interactive: {
+            title: "🎮 Interactive Boredom Busters",
+            text: "<p>Want more than just ideas? BoredomSolver has built-in games and challenges:</p><ul><li>Press the big 'I'm Bored' button for instant random activities</li><li>Try the Stay Challenge—see how long you can last on the site</li><li>Play Tic-Tac-Toe against our bot</li><li>Take the 15-second Brain Sprint challenge</li><li>Play Memory Match and test your brain</li><li>Accept daily chaos challenges</li></ul>"
         }
     };
     
