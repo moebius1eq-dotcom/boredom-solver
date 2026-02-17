@@ -2,4 +2,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://boredomsolver.com/sitemap.xml
+Sitemap: https://boredom-solver-rho.vercel.app/sitemap.xml

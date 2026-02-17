@@ -12,12 +12,12 @@
 /blog-weird-subreddits /blog-weird-subreddits.html 200
 /blog-nothing-matters /blog-nothing-matters.html 200
 /about /about.html 200
-/contact /contact.html 200
+# /contact /contact.html 200
 /privacy-policy /privacy-policy.html 200
 /terms /terms.html 200
 
 # Blog index
-/blog /blog.html 200
+/things-to-do-when-you-cant-sleep /things-to-do-when-you-cant-sleep.html 200
 
 # Root
 /index /BoredomSolver.html 200

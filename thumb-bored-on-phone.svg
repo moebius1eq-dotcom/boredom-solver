@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#0a0a0f"/>
+  <circle cx="600" cy="315" r="300" fill="#00ff88" opacity="0.1"/>
+  <text x="600" y="280" font-family="Arial" font-size="70" fill="#00ff88" text-anchor="middle" font-weight="bold">BORED ON YOUR PHONE?</text>
+  <text x="600" y="380" font-family="Arial" font-size="40" fill="#888" text-anchor="middle">50+ Things to Do When You're Bored on Your Phone</text>
+  <text x="600" y="450" font-family="Arial" font-size="30" fill="#555" text-anchor="middle">boredom-solver-rho.vercel.app</text>
+  <text x="200" y="200" font-size="100">📱</text>
+  <text x="1000" y="200" font-size="100">🎮</text>
+  <text x="200" y="500" font-size="100">🕹️</text>
+  <text x="1000" y="500" font-size="100">🎯</text>
+</svg>

@@ -3,23 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BoredomSolver - Bored? Let's Fix That!</title>
-    <meta name="description" content="Instant activities for bored people. No productivity, no workouts, just weird low-effort fun.">
-    <meta name="google-site-verification" content="wewHqQ-K0vV4dp9rPN28BRmdnj1wbtVD7fI4mAS3ENs" />
-    <link rel="canonical" href="https://boredomsolver.com/">
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🧩</text></svg>">
+    <title>Things to Do When You're Bored (At Night, At Home, With Friends, 2am) | BoredomSolver - 100+ Free Ideas</title>
+    <meta name="description" content="Instant boredom-busting ideas! What to do when bored at night, at home, alone, or with friends. 100+ free activities, games, and challenges. Updated daily.">
+    <meta name="google-site-verification" content="zJQkX047rbHp0vz_t1TouinfPO2nA1bJXkm_ofqOM4c" />
+    <link rel="canonical" href="https://boredom-solver-rho.vercel.app/">
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
     
     <!-- Open Graph -->
     <meta property="og:type" content="website">
-    <meta property="og:title" content="BoredomSolver - Bored? Let's Fix That!">
-    <meta property="og:description" content="Instant activities for bored people. No productivity, no workouts, just weird low-effort fun.">
-    <meta property="og:url" content="https://boredomsolver.com/">
+    <meta property="og:title" content="Things to Do When You're Bored - 100+ Free Ideas (Night, Home, 2am, With Friends)">
+    <meta property="og:description" content="Instant boredom-busting ideas! What to do when bored at night, at home, alone, or with friends. Try our games & challenges!">
+    <meta property="og:image" content="https://boredom-solver-rho.vercel.app/og.png">
+    <meta property="og:url" content="https://boredom-solver-rho.vercel.app/">
     <meta property="og:site_name" content="BoredomSolver">
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="BoredomSolver - Bored? Let's Fix That!">
-    <meta name="twitter:description" content="Instant activities for bored people. No productivity, no workouts, just weird low-effort fun.">
+    <meta name="twitter:title" content="Things to Do When You're Bored - 100+ Free Ideas | BoredomSolver">
+    <meta name="twitter:description" content="Instant boredom-busting ideas for when you're bored at night, at home, alone, or with friends!">
+    <meta name="twitter:image" content="https://boredom-solver-rho.vercel.app/og.png">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         :root {
@@ -145,6 +147,10 @@
         /* QUIZ */
         .quiz-option { background: var(--dark); padding: 15px 20px; border-radius: 12px; cursor: pointer; transition: 0.2s; border: 2px solid transparent; }
         .quiz-option:hover { border-color: var(--accent); }
+        
+        /* MEMORY */
+        .memory-card { background: var(--dark); padding: 20px; border-radius: 12px; cursor: pointer; font-size: 2rem; text-align: center; transition: 0.2s; }
+        .memory-card:hover { transform: scale(1.05); }
 
         /* USER */
         .user-dash { background: var(--card-bg); border-radius: 20px; padding: 25px; margin: 20px 0; }
@@ -154,6 +160,14 @@
         .user-stat .label { color: var(--muted); font-size: 0.85rem; }
         .login-form { display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; }
         .login-form input { padding: 12px 20px; border-radius: 25px; border: 1px solid #333; background: var(--dark); color: white; }
+        
+        /* PERSONALIZATION BAR */
+        .personalize-bar { display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; padding: 20px; background: var(--card-bg); border-radius: 20px; margin-bottom: 25px; border: 2px solid #222; }
+        .personalize-group { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+        .personalize-label { color: var(--muted); font-size: 0.9rem; font-weight: 600; }
+        .personalize-btn { background: var(--dark); border: 2px solid #333; color: var(--muted); padding: 8px 14px; border-radius: 20px; cursor: pointer; font-size: 0.8rem; transition: 0.2s; }
+        .personalize-btn:hover { border-color: var(--accent); color: var(--light); }
+        .personalize-btn.active { background: var(--accent); border-color: var(--accent); color: var(--dark); font-weight: 700; }
 
         /* CONFETTI & EFFECTS */
         .confetti { position: fixed; width: 10px; height: 10px; top: -10px; z-index: 1000; animation: fall 3s linear forwards; }
@@ -175,6 +189,21 @@
             .big-btn { font-size: 1.1rem; padding: 15px 35px; }
             .nav-links { display: none; }
         }
+        
+        /* ACCORDION/SEO */
+        .accordion { background: var(--card-bg); border-radius: 16px; margin: 30px 0; overflow: hidden; }
+        .accordion-header { padding: 20px; cursor: pointer; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #333; }
+        .accordion-header:hover { background: var(--card-hover); }
+        .accordion-title { font-weight: 700; color: var(--accent); }
+        .accordion-icon { font-size: 1.2rem; transition: transform 0.3s; }
+        .accordion.open .accordion-icon { transform: rotate(180deg); }
+        .accordion-content { max-height: 0; overflow: hidden; transition: max-height 0.3s ease-out; }
+        .accordion.open .accordion-content { max-height: 2000px; }
+        .accordion-inner { padding: 20px; line-height: 1.8; color: var(--muted); }
+        .accordion-inner h3 { color: var(--light); margin: 20px 0 10px; font-size: 1.1rem; }
+        .accordion-inner h3:first-child { margin-top: 0; }
+        .accordion-inner p { margin-bottom: 15px; }
+        .accordion-inner a { color: var(--accent); }
     </style>
 </head>
 <body>
@@ -191,8 +220,8 @@
     <div class="top-bar">
         <div class="logo">🧩 BoredomSolver</div>
         <div class="nav-links">
-            <a href="blog.html">📝 Blog</a>
             <a href="about.html">About</a>
+            <a href="blog.html">Blog</a>
             <a href="privacy-policy.html">Privacy</a>
             <a href="terms.html">Terms</a>
         </div>
@@ -207,9 +236,52 @@
 
     <!-- HERO -->
     <div class="hero">
-        <h1>😴 Bored? Let's Fix That.</h1>
-        <p class="subtitle">No productivity. No workouts. Just weird low-effort fun.</p>
+        <h1>What to Do When You're Bored? 🎯</h1>
+        <p class="subtitle">Instant ideas for when you're bored at night, at home, or with friends. No money needed. 100+ activities & games.</p>
         <button class="big-btn" onclick="imBored()">😫 I'M BORED</button>
+    </div>
+
+    <!-- VISIBLE SEO CONTENT - Key keyword sections for Google -->
+    <div class="container" style="padding: 30px 20px;">
+        <div style="background: var(--card-bg); border-radius: 20px; padding: 30px; margin-bottom: 30px;">
+            <h2 style="color: var(--accent); font-size: 1.8rem; margin-bottom: 20px;">😴 What to Do When Bored at Night</h2>
+            <p style="color: var(--muted); line-height: 1.8; margin-bottom: 15px;">Late night boredom hits different. When you can't sleep and need <strong>things to do at 2am</strong>, we've got you covered. Whether you're lying awake wondering <strong>what to do when you're bored at night</strong>, or looking for <strong>fun things to do at 2am</strong>, these activities don't involve scrolling Instagram until your eyes bleed. Try a Wikipedia spiral, contemplate the universe, or challenge yourself to our brain games. Nighttime is when creativity strikes - embrace the quiet.</p>
+            
+            <h2 style="color: var(--accent); font-size: 1.8rem; margin: 30px 0 20px;">🏠 Things to Do When Bored at Home</h2>
+            <p style="color: var(--muted); line-height: 1.8; margin-bottom: 15px;">Stuck inside with nothing to do? Being home bored doesn't have to mean watching Netflix for the third time. From <strong>things to do when bored and alone in your room</strong> to activities for when you're home with friends, we cover every scenario. Try the "Stay Challenge" - can you actually stay on this website? It's harder than it sounds. Or reorganize your entire phone, learn a useless fact, or start a Google Maps adventure to somewhere you've never been.</p>
+            
+            <h2 style="color: var(--accent); font-size: 1.8rem; margin: 30px 0 20px;">👶 What to Do When Bored as a Teenager</h2>
+            <p style="color: var(--muted); line-height: 1.8; margin-bottom: 15px;">Being a teenager with nothing to do is a special kind of boredom. You've done the TikTok scroll, replied to all your snaps, and now you're just... existing. Whether you're looking for <strong>things to do when bored with friends</strong> or solo activities that don't require money or leaving your room, BoredomSolver speaks your language. Our challenges are perfect for sending to friends, and the "dare" format fits perfectly with group chats.</p>
+            
+            <h2 style="color: var(--accent); font-size: 1.8rem; margin: 30px 0 20px;">💰 What to Do When Bored and Have No Money</h2>
+            <p style="color: var(--muted); line-height: 1.8; margin-bottom: 15px;">Zero budget? No problem. All our activities are free - because boredom shouldn't cost anything. From <strong>things to do when bored with no money</strong> to creative ways to waste time without spending a dime, we've tested everything. The best things in life are free, and the most boring activities are too - embrace the art of doing absolutely nothing productive. It's genuinely therapeutic.</p>
+            
+            <h2 style="color: var(--accent); font-size: 1.8rem; margin: 30px 0 20px;">🎮 Fun Things to Do When Bored</h2>
+            <p style="color: var(--muted); line-height: 1.8; margin-bottom: 15px;">Looking for <strong>fun things to do when you're bored</strong>? Our random challenge generator creates instant entertainment - send a dare to a friend, try our brain games, or compete on leaderboards. Whether you want chaotic energy or chill vibes, there's something here for every mood. The key to having fun when bored is accepting that sometimes doing nothing is the entire point.</p>
+        </div>
+    </div>
+
+    <!-- PERSONALIZATION -->
+    <div class="container">
+        <div class="personalize-bar">
+            <div class="personalize-group">
+                <span class="personalize-label">Energy:</span>
+                <button class="personalize-btn active" onclick="setEnergy('low')" data-energy="low">🪑 Low</button>
+                <button class="personalize-btn" onclick="setEnergy('medium')" data-energy="medium">🚶 Medium</button>
+                <button class="personalize-btn" onclick="setEnergy('high')" data-energy="high">🏃 High</button>
+            </div>
+            <div class="personalize-group">
+                <span class="personalize-label">With:</span>
+                <button class="personalize-btn active" onclick="setCompany('alone')" data-company="alone">🙈 Alone</button>
+                <button class="personalize-btn" onclick="setCompany('friends')" data-company="friends">👯 Friends</button>
+            </div>
+            <div class="personalize-group">
+                <span class="personalize-label">Vibe:</span>
+                <button class="personalize-btn active" onclick="setVibe('chill')" data-vibe="chill">😌 Chill</button>
+                <button class="personalize-btn" onclick="setVibe('chaotic')" data-vibe="chaotic">🌀 Chaotic</button>
+                <button class="personalize-btn" onclick="setVibe('productive')" data-vibe="productive">💪 Productive</button>
+            </div>
+        </div>
     </div>
 
     <!-- CLOCK WITH DINO AND MARIO -->
@@ -261,6 +333,23 @@
             <div class="game-card" onclick="showGame('brain')"><div class="icon">⚡</div><div class="title">Brain 15s</div></div>
             <div class="game-card" onclick="showGame('ttt')"><div class="icon">⭕</div><div class="title">vs Bot</div></div>
             <div class="game-card" onclick="showGame('stay')"><div class="icon">🔥</div><div class="title">Stay Challenge</div></div>
+            <div class="game-card" onclick="showGame('memory')"><div class="icon">🧠</div><div class="title">Memory</div></div>
+            <div class="game-card" onclick="showGame('guess')"><div class="icon">🎯</div><div class="title">Guess Number</div></div>
+        </div>
+
+        <!-- DAILY CHALLENGE -->
+        <div style="background: linear-gradient(135deg, #1a1a2e, #16213e); border-radius: 20px; padding: 25px; margin: 20px 0; text-align: center; border: 2px solid #00ff88;">
+            <h3 style="color: #00ff88; margin-bottom: 10px;">📅 Daily Boredom Challenge</h3>
+            <p style="color: #888; margin-bottom: 15px;">🔥 Streak: <span id="dailyStreak" style="color: #00ff88; font-weight: bold;">0</span> days</p>
+            <p id="dailyText" style="font-size: 1.1rem; margin-bottom: 15px; color: #fff;">Loading...</p>
+            <button id="dailyBtn" class="big-btn" style="font-size: 1rem; padding: 12px 30px;" onclick="doDailyChallenge()">✅ Accept Challenge</button>
+        </div>
+
+        <!-- AI ROAST -->
+        <div style="background: var(--card-bg); border-radius: 20px; padding: 25px; margin: 20px 0; text-align: center;">
+            <h3 style="color: #ff6b35; margin-bottom: 10px;">🤖 AI Roast Your Boredom</h3>
+            <p style="color: #888; margin-bottom: 15px;">Let AI roast you for being bored</p>
+            <button class="big-btn" style="font-size: 1rem; padding: 12px 30px; background: #ff6b35;" onclick="getRoast()">🔥 Get Roasted</button>
         </div>
 
         <div class="game-container" id="gameBrain">
@@ -308,6 +397,30 @@
             </div>
         </div>
 
+        <!-- MEMORY GAME -->
+        <div class="game-container" id="gameMemory">
+            <div style="text-align: center;">
+                <h3>🧠 Memory Match</h3>
+                <p style="color: var(--muted); margin-bottom: 15px;">Find all matching pairs!</p>
+                <div style="font-size: 1.5rem; color: var(--accent); margin-bottom: 15px;">Score: <span id="memoryScore">0</span></div>
+                <div id="memoryGrid" style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; max-width: 300px; margin: 0 auto;"></div>
+                <button class="challenge-btn" onclick="initMemory()" style="margin-top: 15px;">🔄 Restart</button>
+            </div>
+        </div>
+
+        <!-- GUESS NUMBER GAME -->
+        <div class="game-container" id="gameGuess">
+            <div style="text-align: center;">
+                <h3>🎯 Guess the Number</h3>
+                <p style="color: var(--muted); margin-bottom: 15px;">I'm thinking of a number 1-100</p>
+                <input type="number" id="guessInput" placeholder="1-100" style="padding: 10px; font-size: 1.2rem; border-radius: 20px; border: 2px solid var(--accent); background: var(--dark); color: white; width: 100px; text-align: center;">
+                <button class="challenge-btn" onclick="makeGuess()">Guess</button>
+                <p id="guessResult" style="margin-top: 15px; font-size: 1.1rem;"></p>
+                <p style="color: var(--muted);">Attempts: <span id="guessAttempts">0</span></p>
+                <button class="challenge-btn" onclick="initGuess()" style="margin-top: 10px;">🔄 New Game</button>
+            </div>
+        </div>
+
         <!-- QUIZ -->
         <div class="section-title">🧪 Take the Boredom Quiz</div>
         <div style="background: var(--card-bg); border-radius: 20px; padding: 30px; margin: 20px 0;">
@@ -331,8 +444,53 @@
                 <p style="font-size: 1.2rem; margin-bottom: 15px;">3. Best quick activity?</p>
                 <div style="display: flex; flex-direction: column; gap: 10px;">
                     <div class="quiz-option" onclick="showModal('❌ Wrong!','Thinking is too much work.'); this.style.background='#ef4444'">Think</div>
-                    <div class="quiz-option" onclick="showModal('✅ Correct!','Existing is the ultimate activity.'); this.style.background='#22c55e'; confettiEffect()">Exist</div>
+                    <div class="quiz-option" onclick="showModal('✅ Correct!','Existing is the ultimate activity.'); this.style.background='#22c55e'; showQuiz(4)">Exist</div>
                 </div>
+            </div>
+            <div id="quiz4" style="display:none;">
+                <p style="font-size: 1.2rem; margin-bottom: 15px;">4. When bored, you should...</p>
+                <div style="display: flex; flex-direction: column; gap: 10px;">
+                    <div class="quiz-option" onclick="showModal('❌ Wrong!','Productivity is for winners.'); this.style.background='#ef4444'">Be productive</div>
+                    <div class="quiz-option" onclick="showModal('✅ Correct!','Embrace the void!'); this.style.background='#22c55e'; showQuiz(5)">Embrace nothingness</div>
+                    <div class="quiz-option" onclick="showModal('❌ Wrong!','That just leads to more boredom.'); this.style.background='#ef4444'">Do laundry</div>
+                </div>
+            </div>
+            <div id="quiz5" style="display:none;">
+                <p style="font-size: 1.2rem; margin-bottom: 15px;">5. The perfect bored moment involves...</p>
+                <div style="display: flex; flex-direction: column; gap: 10px;">
+                    <div class="quiz-option" onclick="showModal('✅ Correct!','Total zen achieved.'); this.style.background='#22c55e'; showQuiz(6)">Staring at a wall</div>
+                    <div class="quiz-option" onclick="showModal('❌ Wrong!','Too much effort.'); this.style.background='#ef4444'">Solving equations</div>
+                    <div class="quiz-option" onclick="showModal('❌ Wrong!','Not boring enough.'); this.style.background='#ef4444'">Going for a run</div>
+                </div>
+            </div>
+            <div id="quiz6" style="display:none;">
+                <p style="font-size: 1.2rem; margin-bottom: 15px;">6. Your opinion on doing nothing?</p>
+                <div style="display: flex; flex-direction: column; gap: 10px;">
+                    <div class="quiz-option" onclick="showModal('✅ Correct!','Nothing is something.'); this.style.background='#22c55e'; showQuiz(7)">It's an art form</div>
+                    <div class="quiz-option" onclick="showModal('❌ Wrong!','But you earned those XP!'); this.style.background='#ef4444'">Waste of time</div>
+                    <div class="quiz-option" onclick="showModal('❌ Wrong!','Meditation is too purposeful.'); this.style.background='#ef4444'">Meditation</div>
+                </div>
+            </div>
+            <div id="quiz7" style="display:none;">
+                <p style="font-size: 1.2rem; margin-bottom: 15px;">7. Best way to spend 5 minutes?</p>
+                <div style="display: flex; flex-direction: column; gap: 10px;">
+                    <div class="quiz-option" onclick="showModal('❌ Wrong!','You have the whole internet for that.'); this.style.background='#ef4444'">Learn a language</div>
+                    <div class="quiz-option" onclick="showModal('✅ Correct!','Maximum boredom achieved.'); this.style.background='#22c55e'; showQuiz(8)">Watch the clock tick</div>
+                    <div class="quiz-option" onclick="showModal('❌ Wrong!','Too engaging.'); this.style.background='#ef4444'">Read a book</div>
+                </div>
+            </div>
+            <div id="quiz8" style="display:none;">
+                <p style="font-size: 1.2rem; margin-bottom: 15px;">8. When someone says "you're bored?"</p>
+                <div style="display: flex; flex-direction: column; gap: 10px;">
+                    <div class="quiz-option" onclick="showModal('❌ Wrong!','Confidence is not the issue.'); this.style.background='#ef4444'">"I have plenty to do"</div>
+                    <div class="quiz-option" onclick="showModal('✅ Correct!','Own it!'); this.style.background='#22c55e'; confettiEffect(); showModal('🎉 Quiz Complete!','You are a certified boredom expert!')">"Boredom is my specialty"</div>
+                    <div class="quiz-option" onclick="showModal('❌ Wrong!','No productivity allowed here.'); this.style.background='#ef4444'">"Let me be productive"</div>
+                </div>
+            </div>
+            <div id="quizComplete" style="display:none; text-align: center; padding: 30px;">
+                <h2 style="color: var(--accent); margin-bottom: 15px;">🎉 Quiz Complete!</h2>
+                <p style="color: var(--muted);">You're a certified Boredom Expert!</p>
+                <button class="big-btn" style="font-size: 1rem; padding: 12px 30px; margin-top: 20px;" onclick="resetQuiz()">🔄 Try Again</button>
             </div>
         </div>
 
@@ -344,12 +502,140 @@
         <div style="margin: 30px 0; padding: 20px; background: var(--card-bg); border-radius: 15px;">
             <p style="color: var(--muted); margin-bottom: 15px;">📚 <strong>More ways to be bored:</strong></p>
             <div style="display: flex; flex-wrap: wrap; gap: 10px;">
+                <a href="things-to-do-when-bored.html" style="color: var(--accent);">📖 101 Things to Do When Bored</a>
                 <a href="things-to-do-when-bored-at-home.html" style="color: var(--accent);">50 Things to Do at Home</a>
                 <a href="things-to-do-when-bored-on-phone.html" style="color: var(--accent);">Bored on Phone</a>
                 <a href="things-to-do-when-bored-at-night.html" style="color: var(--accent);">Bored at Night</a>
                 <a href="fun-5-minute-activities.html" style="color: var(--accent);">5-Minute Activities</a>
                 <a href="things-to-do-when-bored-with-friends.html" style="color: var(--accent);">With Friends</a>
             </div>
+        </div>
+
+        <!-- SEO ACCORDION -->
+        <div class="accordion" onclick="toggleAccordion(this)">
+            <div class="accordion-header">
+                <span class="accordion-title">📖 101 Things to Do When You're Bored - The Ultimate Guide</span>
+                <span class="accordion-icon">▼</span>
+            </div>
+            <div class="accordion-content">
+                <div class="accordion-inner">
+                    <h3>Things to Do When Bored at Night</h3>
+                    <p>Late night boredom hits different. When the world sleeps but you can't, these activities are perfect for those 2am moments. Whether you're staring at the ceiling wondering what to do when bored at night, or looking for fun things to do at 2am, we've got ideas that don't involve scrolling Instagram until your eyes bleed. Try a Wikipedia spiral, contemplate the universe, or challenge yourself to our brain games. Nighttime is when creativity strikes - embrace the quiet and let boredom transform into something interesting.</p>
+                    
+                    <h3>Things to Do When Bored at Home</h3>
+                    <p>Stuck inside with nothing to do? Being home bored doesn't have to mean watching the same Netflix show for the third time. From things to do when bored and alone in your room to activities for when you're home with friends, we cover every scenario. Try our "Stay Challenge" - can you actually stay on this website? It's harder than it sounds. Or reorganize your entire phone, learn a useless fact, or start a Google Maps street view adventure to somewhere you've never been.</p>
+                    
+                    <h3>Things to Do When Bored as a Teen</h3>
+                    <p>Being a teenager with nothing to do is a special kind of boredom. You've done the TikTok scroll, replied to all your snaps, and now you're just... existing. That's where we come in. Whether you're looking for things to do when bored with friends or solo activities that don't require money or leaving your room, BoredomSolver speaks your language. Our challenges are perfect for sending to friends, and the "dare" format fits perfectly with group chats.</p>
+                    
+                    <h3>What to Do When Bored and Have No Money</h3>
+                    <p>Zero budget? No problem. All our activities are free - because boredom shouldn't cost anything. From things to do when bored with no money to creative ways to waste time without spending a dime, we've tested everything. The best things in life are free, and the most boring activities are too - embrace the art of doing absolutely nothing productive. It's genuinely therapeutic.</p>
+                    
+                    <h3>Fun Things to Do When Bored</h3>
+                    <p>"Fun" is subjective, but we've curated activities that range from genuinely entertaining to weirdly satisfying. Our random challenge generator creates instant entertainment - send a dare to a friend, try our brain games, or compete on the leaderboard. Whether you want chaotic energy or chill vibes, there's something here for every mood. The key to having fun when bored is accepting that sometimes doing nothing is the entire point.</p>
+                    
+                    <h3>Quick 5-Minute Activities</h3>
+                    <p>Sometimes you only have a few minutes to kill. These micro-activities are designed for those moments - things to do when bored for 5 minutes, in between classes, or waiting for something to load. Stare at the clock, learn a useless fact, rate your recent photos, or just contemplate existence. Five minutes of boredom properly embraced can be more refreshing than you'd think.</p>
+                    
+                    <h3>Boredom With Friends</h3>
+                    <p>Boredom is better with friends. Our challenge system is designed for group entertainment - share dares, compete on leaderboards, play games together, or just send each other weird prompts. Looking for things to do when bored with friends? Try our text-based games, photo challenges, or the infamous "Stay Challenge" to see who can resist checking their phone longest. Friends who bored together, stay together.</p>
+                    
+                    <h3>Things to Do When You Can't Sleep</h3>
+                    <p>3am and wide awake? You're not alone. The quiet of nighttime makes boredom feel different - more philosophical, somehow. When you can't sleep and don't want to scroll your phone (or have already done that twice), try these night-owl activities. Contemplate the universe, think about what you want for dinner next Tuesday, or challenge yourself to remember every word to a song you haven't heard in years. Sleep will come eventually. Until then, embrace the insomnia.</p>
+                    
+                    <h3>Online Activities & Games</h3>
+                    <p>Sometimes you need more than just ideas - you need action. Our built-in games include Tic-Tac-Toe against an unbeatable bot (seriously, try to win), the 15-second brain sprint for math lovers, memory match, and the ultimate test of boredom endurance: the Stay Challenge. Can you stay on this website without checking your phone? The leaderboard doesn't lie. We also have interactive challenges that work perfectly over text with friends.</p>
+                    
+                    <h3>Beat Boredom Now</h3>
+                    <p>Stop searching "what should I do when I'm bored" for the hundredth time today. BoredomSolver brings the entertainment to you instantly. Click "I'm Bored" above for a personalized random activity, or use our filters to find exactly what matches your current situation. Select your energy level, whether you're alone or with friends, and your vibe preference - and we'll tailor the suggestions. Because life is too short to be bored, but also too short to be productive all the time. Balance is key, and sometimes the best thing you can do is absolutely nothing at all.</p>
+                </div>
+            </div>
+        </div>
+
+        <script>
+        function toggleAccordion(el) {
+            el.classList.toggle('open');
+        }
+        </script>
+
+        <!-- SEO PILLAR CONTENT - Visible for Google -->
+        <div class="container" style="margin-top: 40px;">
+            <h2 style="color: var(--accent); font-size: 1.8rem; margin-bottom: 20px;">🧩 The Ultimate Guide: What to Do When You're Bored</h2>
+            
+            <p style="color: var(--muted); line-height: 1.8; margin-bottom: 25px;">Feeling bored? We've all been there. Whether you're stuck at home on a rainy afternoon, lying awake at 2am, or hanging out with friends with nothing to do, boredom hits hard. This comprehensive guide covers <strong>everything you need to beat boredom</strong>—from quick 2-minute activities to longer adventures. No money required, no productivity needed, just pure entertainment.</p>
+            
+            <h3 style="color: var(--light); font-size: 1.4rem; margin: 30px 0 15px;">😴 What to Do When Bored at Night Alone</h3>
+            <p style="color: var(--muted); line-height: 1.8; margin-bottom: 15px;">Late night boredom hits different. The world is quiet, sleep won't come, and you need something to do at 2am without disturbing anyone. Try these activities perfect for those quiet hours:</p>
+            <ul style="color: var(--muted); margin-left: 20px; line-height: 2;">
+                <li>Listen to ambient sounds—rain, coffee shop chatter, or ocean waves</li>
+                <li>Deep dive into Wikipedia (start with "Random Article")</li>
+                <li>Contemplate the universe and get mildly existential</li>
+                <li>Organize your phone photos by color (weirdly satisfying)</li>
+                <li>Write a poem so bad it's funny</li>
+                <li>Watch YouTube essay videos about random topics</li>
+            </ul>
+            
+            <h3 style="color: var(--light); font-size: 1.4rem; margin: 30px 0 15px;">🏠 Things to Do When Bored at Home</h3>
+            <p style="color: var(--muted); line-height: 1.8; margin-bottom: 15px;">Being stuck at home doesn't have to be boring. Whether it's a sick day, weekend, or just one of those days, here's how to kill time without leaving your couch:</p>
+            <ul style="color: var(--muted); margin-left: 20px; line-height: 2;">
+                <li>Stare at the clock and watch time pass (oddly hypnotic)</li>
+                <li>Sort your apps by color, then size, then regret it</li>
+                <li>Read the strangest Amazon 1-star reviews</li>
+                <li>Explore Google Maps street view places you'll never visit</li>
+                <li>Make playlists for fictional moods you don't have</li>
+                <li>Go through old photos and rate them 1-10</li>
+            </ul>
+            
+            <h3 style="color: var(--light); font-size: 1.4rem; margin: 30px 0 15px;">💰 Things to Do When Bored and Have No Money</h3>
+            <p style="color: var(--muted); line-height: 1.8; margin-bottom: 15px;">Zero budget? No problem. The best boredom busters are free:</p>
+            <ul style="color: var(--muted); margin-left: 20px; line-height: 2;">
+                <li>Challenge yourself to not blink for 60 seconds (you'll fail)</li>
+                <li>Learn to juggle with anything—scarves, socks, your phone (carefully)</li>
+                <li>Write a text to someone but don't send it (emotional release)</li>
+                <li>Make up a new sport with invented rules</li>
+                <li>Rate every photo in your camera roll</li>
+                <li>Invent conspiracy theories about your houseplants</li>
+            </ul>
+            
+            <h3 style="color: var(--light); font-size: 1.4rem; margin: 30px 0 15px;">👶 What to Do When Bored as a Teenager</h3>
+            <p style="color: var(--muted); line-height: 1.8; margin-bottom: 15px;">Being a teenager with nothing to do is a universal experience. Here's how to survive:</p>
+            <ul style="color: var(--muted); margin-left: 20px; line-height: 2;">
+                <li>Scroll Reddit's most controversial posts</li>
+                <li>Create a meme about your exact current situation</li>
+                <li>Text your friends weird things and see who responds</li>
+                <li>Watch "try not to laugh" compilations (you will fail)</li>
+                <li>Change your profile picture to something random</li>
+                <li>Deep dive into obscure Subreddits with under 100 members</li>
+            </ul>
+            
+            <h3 style="color: var(--light); font-size: 1.4rem; margin: 30px 0 15px;">🌙 Fun Things to Do at 2am When You Can't Sleep</h3>
+            <p style="color: var(--muted); line-height: 1.8; margin-bottom: 15px;">2am and wide awake? The world is your oyster (or your oyster of existential dread):</p>
+            <ul style="color: var(--muted); margin-left: 20px; line-height: 2;">
+                <li>Listen to lo-fi beats and pretend you're in a study session</li>
+                <li>Google "what would happen if" questions</li>
+                <li>Watch cooking videos you'll never cook</li>
+                <li>Think about your hypothetical other life in another country</li>
+                <li>Look up at the ceiling and name the stains</li>
+                <li>Let Spotify's autoplay take you on a musical journey</li>
+            </ul>
+            
+            <h3 style="color: var(--light); font-size: 1.4rem; margin: 30px 0 15px;">🎮 Interactive Boredom Busters</h3>
+            <p style="color: var(--muted); line-height: 1.8; margin-bottom: 15px;">Want more than just ideas? BoredomSolver has built-in games and challenges:</p>
+            <ul style="color: var(--muted); margin-left: 20px; line-height: 2;">
+                <li>Press the big "I'm Bored" button for instant random activities</li>
+                <li>Try the Stay Challenge—see how long you can last on the site</li>
+                <li>Play Tic-Tac-Toe against our bot</li>
+                <li>Take the 15-second Brain Sprint challenge</li>
+                <li>Play Memory Match and test your brain</li>
+                <li>Accept daily chaos challenges</li>
+            </ul>
+            
+            <div style="background: var(--card-bg); padding: 25px; border-radius: 15px; margin: 30px 0; border-left: 4px solid var(--accent);">
+                <h4 style="color: var(--accent); margin-bottom: 10px;">💡 Pro Tip: Embrace the Boredom</h4>
+                <p style="color: var(--muted); line-height: 1.8;">Research shows that boredom can actually boost creativity and problem-solving abilities. Instead of fighting it, use this site to lean into it. Sometimes doing absolutely nothing is exactly what your brain needs. Productivity is overrated.</p>
+            </div>
+            
+            <p style="color: var(--muted); line-height: 1.8; margin-top: 25px;">Stop searching for "what should I do when I'm bored" and start doing. Whether you're looking for <strong>things to do when bored at night</strong>, <strong>things to do when bored at home</strong>, or <strong>fun things to do at 2am</strong>, BoredomSolver has you covered. Bookmark this page and beat boredom forever. 🎯</p>
         </div>
 
         <!-- USER -->
@@ -373,11 +659,208 @@
         </div>
     </div>
 
+    <!-- VISITOR LOG -->
+    <div style="padding: 30px 20px; max-width: 800px; margin: 0 auto;">
+        <h3 style="color: #00ff88; text-align: center; margin-bottom: 20px;">Recent Visitors</h3>
+        <div id="visitorLog" style="display: flex; flex-direction: column; gap: 10px;">
+            <p style="color: #888; text-align: center;">Loading...</p>
+        </div>
+    </div>
+
     <footer>
-        <p>© 2026 BoredomSolver | <a href="blog.html">📝 Blog</a> | <a href="about.html">About</a> | <a href="privacy-policy.html">Privacy</a> | <a href="terms.html">Terms</a></p>
+        <p>© 2026 BoredomSolver | <a href="about.html">About</a> | <a href="privacy-policy.html">Privacy</a> | <a href="terms.html">Terms</a></p>
     </footer>
 
+    <!-- RESULT MODAL -->
+    <div class="modal" id="resultModal">
+        <div class="modal-content" style="max-width: 500px; background: linear-gradient(135deg, #1a1a2e, #16213e);">
+            <div id="resultContent" style="text-align: center;">
+                <div id="resultEmoji" style="font-size: 4rem; margin-bottom: 10px;">🏆</div>
+                <h2 id="resultTitle" style="color: #00ff88; font-size: 1.8rem; margin-bottom: 10px;">You Did It!</h2>
+                <p id="resultDesc" style="color: #888; font-size: 1.2rem; margin-bottom: 20px;">Description here</p>
+                <div id="resultBadge" style="background: #00ff88; color: #0a0a0f; padding: 10px 20px; border-radius: 20px; font-weight: bold; display: inline-block; margin-bottom: 20px;">Badge</div>
+                <div style="display: flex; gap: 10px; justify-content: center; flex-wrap: wrap;">
+                    <button class="modal-btn" onclick="shareResult()">📤 Share Result</button>
+                    <button class="modal-btn" onclick="copyResult()">📋 Copy Link</button>
+                </div>
+            </div>
+            <button class="modal-close" onclick="closeResultModal()" style="position: absolute; top: 15px; right: 20px; background: none; border: none; color: #888; font-size: 2rem; cursor: pointer;">×</button>
+        </div>
+    </div>
+
     <script>
+        // VISITOR LOG
+        fetch('/api/visitors')
+            .then(res => res.json())
+            .then(data => {
+                const container = document.getElementById('visitorLog');
+                if (data.visitors && data.visitors.length > 0) {
+                    container.innerHTML = data.visitors.map(v => `
+                        <div style="background: #14141f; padding: 15px; border-radius: 10px; display: flex; justify-content: space-between; align-items: center;">
+                            <div>
+                                <span style="color: #00ff88; font-weight: bold;">${v.name}</span>
+                                <span style="color: #888; margin-left: 10px;">${v.message}</span>
+                            </div>
+                            <span style="color: #555; font-size: 0.8rem;">${new Date(v.timestamp).toLocaleDateString()}</span>
+                        </div>
+                    `).join('');
+                } else {
+                    container.innerHTML = '<p style="color: #888; text-align: center;">No visitors yet. Be the first!</p>';
+                }
+            })
+            .catch(() => {
+                document.getElementById('visitorLog').innerHTML = '<p style="color: #888; text-align: center;">Unable to load visitors</p>';
+            });
+
+        // RESULT ENGINE
+        const boredomResults = [
+            { min: 0, max: 10, emoji: '🐟', title: 'Goldfish Attention Span', desc: 'You survived {time} seconds. Your brain: mostly driftwood.', badge: '🐟 Goldfish' },
+            { min: 10, max: 30, emoji: '🐌', title: 'Snail Speed', desc: '{time} seconds! Impressive... if you\'re a snail.', badge: '🐌 Snail' },
+            { min: 30, max: 60, emoji: '🦥', title: 'Sloth Mode Activated', desc: '{time} seconds of pure nothing. Respect.', badge: '🦥 Sloth' },
+            { min: 60, max: 120, emoji: '🧟', title: 'Zombie Energy', desc: '{time} seconds? You\'re already dead inside.', badge: '🧟 Zombie' },
+            { min: 120, max: 180, emoji: '🧠', title: 'Brain Cell Count: 3', desc: '{time} seconds. One of those brain cells is sleeping.', badge: '🧠 Brain' },
+            { min: 180, max: 300, emoji: '🛋️', title: 'Certified Couch Potato', desc: '{time} seconds of excellence. Your couch misses you.', badge: '🛋️ Couch' },
+            { min: 300, max: 600, emoji: '👑', title: 'Boredom Royalty', desc: '{time} seconds! Bow to the void master.', badge: '👑 Void King' },
+            { min: 600, max: 9999, emoji: '🌌', title: 'Existential Crisis', desc: '{time} seconds... time is a lie anyway.', badge: '🌌 Cosmic' }
+        ];
+        
+        const brainScores = [
+            { score: 0, emoji: '🧀', title: 'Cheese Brain', desc: 'Your brain score: {score}%. You are literally cheese.', badge: '🧀 Cheese' },
+            { score: 20, emoji: '🥦', title: ' microwaved Broccoli', desc: 'Your brain score: {score}%. At least you tried.', badge: '🥦 Broccoli' },
+            { score: 40, emoji: '🍄', title: 'Mildly Productive Goblin', desc: 'Your brain score: {score}%. Go touch grass.', badge: '🍄 Goblin' },
+            { score: 60, emoji: '🐢', title: 'Turtle Energy', desc: 'Your brain score: {score}%. Slow and steady... to nowhere.', badge: '🐢 Turtle' },
+            { score: 80, emoji: '🦊', title: 'Fox Brain', desc: 'Your brain score: {score}%. Too clever for your own good.', badge: '🦊 Fox' },
+            { score: 100, emoji: '🧩', title: 'Boredom Master', desc: 'Your brain score: {score}%. Congratulations on knowing nothing.', badge: '🧩 Master' }
+        ];
+        
+        function showResult(type, value) {
+            let result;
+            if (type === 'time') {
+                result = boredomResults.find(r => value >= r.min && value < r.max) || boredomResults[boredomResults.length - 1];
+                result = { ...result, desc: result.desc.replace('{time}', value) };
+            } else if (type === 'score') {
+                const idx = Math.min(Math.floor(value / 20), brainScores.length - 1);
+                result = { ...brainScores[idx], desc: brainScores[idx].desc.replace('{score}', value) };
+            }
+            
+            document.getElementById('resultEmoji').textContent = result.emoji;
+            document.getElementById('resultTitle').textContent = result.title;
+            document.getElementById('resultDesc').textContent = result.desc;
+            document.getElementById('resultBadge').textContent = result.badge;
+            document.getElementById('resultModal').classList.add('show');
+        }
+        
+        function shareResult() {
+            const title = document.getElementById('resultTitle').textContent;
+            const emoji = document.getElementById('resultEmoji').textContent;
+            const badge = document.getElementById('resultBadge').textContent;
+            navigator.clipboard.writeText(`${emoji} ${title} ${badge} 🔗 https://boredom-solver-rho.vercel.app`);
+            showModal('📤 Copied!', 'Share it on social media!');
+        }
+        
+        function copyResult() {
+            const title = document.getElementById('resultTitle').textContent;
+            const emoji = document.getElementById('resultEmoji').textContent;
+            navigator.clipboard.writeText(`${emoji} ${title} 🔗 https://boredom-solver-rho.vercel.app`);
+            showModal('📋 Copied!', 'Link copied to clipboard!');
+        }
+        
+        function closeResultModal() {
+            document.getElementById('resultModal').classList.remove('show');
+        }
+        
+        // DAILY CHALLENGE
+        const dailyChallenges = [
+            "Send a voice note that just says 'hmm'",
+            "Text someone 'I'm bored' then don't reply",
+            "Rate your mood 1-10 with just an emoji",
+            "Text someone a random word and wait",
+            "Send '👁️' to your last text",
+            "Text 'improvment' (typo) to someone",
+            "Send your worst selfie to a friend",
+            "Text 'spoiler alert' then make up a movie spoiler",
+            "Send a voice note as a robot",
+            "Text 'goodnight' to someone who just woke up"
+        ];
+        
+        let dailyDone = false;
+        let dailyStreak = parseInt(localStorage.getItem('dailyStreak')) || 0;
+        let lastDaily = localStorage.getItem('lastDaily');
+        
+        function getDailyChallenge() {
+            const today = new Date().toDateString();
+            const dayNum = new Date().getDate();
+            const challenge = dailyChallenges[dayNum % dailyChallenges.length];
+            
+            const textEl = document.getElementById('dailyText');
+            const btnEl = document.getElementById('dailyBtn');
+            const streakEl = document.getElementById('dailyStreak');
+            
+            if (textEl) textEl.textContent = challenge;
+            if (streakEl) streakEl.textContent = dailyStreak;
+            
+            if (lastDaily === today && btnEl) {
+                btnEl.textContent = '✅ Done Today!';
+                btnEl.disabled = true;
+                dailyDone = true;
+            }
+        }
+        
+        function doDailyChallenge() {
+            if (dailyDone) return;
+            const today = new Date().toDateString();
+            lastDaily = today;
+            dailyStreak++;
+            localStorage.setItem('dailyStreak', dailyStreak);
+            localStorage.setItem('lastDaily', today);
+            dailyDone = true;
+            
+            const btnEl = document.getElementById('dailyBtn');
+            const streakEl = document.getElementById('dailyStreak');
+            if (btnEl) {
+                btnEl.textContent = '✅ Done Today!';
+                btnEl.disabled = true;
+            }
+            if (streakEl) streakEl.textContent = dailyStreak;
+            
+            showResult('score', Math.min(dailyStreak * 15, 100));
+        }
+        
+        // AI ROAST
+        const roasts = [
+            "Bro really said 'I'm bored' 💀 The bar is in hell.",
+            "You're so bored even your shadow left.",
+            "Boredom level: exists. Literally just exists.",
+            "My grandma has more going on and she's napping.",
+            "This person: *does nothing* *uccessfully*",
+            "The void stares back. It looks bored too.",
+            "Congrats! You're the main character of nothing.",
+            "Touch grass? No, touch anything please."
+        ];
+        
+        function getRoast() {
+            const roast = roasts[Math.floor(Math.random() * roasts.length)];
+            const score = Math.floor(Math.random() * 60 + 20);
+            
+            // Get badge based on score
+            const brainScores = [
+                { score: 0, emoji: '🧀', title: 'Cheese Brain', badge: '🧀 Cheese' },
+                { score: 20, emoji: '🥦', title: 'Microwaved Broccoli', badge: '🥦 Broccoli' },
+                { score: 40, emoji: '🍄', title: 'Mildly Productive Goblin', badge: '🍄 Goblin' },
+                { score: 60, emoji: '🐢', title: 'Turtle Energy', badge: '🐢 Turtle' },
+                { score: 80, emoji: '🦊', title: 'Fox Brain', badge: '🦊 Fox' },
+                { score: 100, emoji: '🧩', title: 'Boredom Master', badge: '🧩 Master' }
+            ];
+            const idx = Math.min(Math.floor(score / 20), brainScores.length - 1);
+            const badge = brainScores[idx];
+            
+            document.getElementById('resultEmoji').textContent = "🤖";
+            document.getElementById('resultTitle').textContent = "🤖 AI Roast";
+            document.getElementById('resultDesc').textContent = roast;
+            document.getElementById('resultBadge').textContent = badge.badge;
+            document.getElementById('resultModal').classList.add('show');
+        }
+
         // MODAL FUNCTIONS
         function showModal(title, text) {
             document.getElementById('modalTitle').textContent = title;
@@ -522,29 +1005,41 @@
             document.getElementById('stayGiveUpBtn').style.display = 'none';
         }
 
-        // ACTIVITIES - no dark jokes
+        // ACTIVITIES - with personalization tags
         const activities = [
-            { id: 1, title: "Stare at the Clock", desc: "Just watch time pass. It's oddly satisfying.", time: 5, tags: ["home", "weird", "think"] },
-            { id: 2, title: "Deep Reddit Dive", desc: "Find the weirdest subreddit you can.", time: 15, tags: ["phone", "computer", "scroll"] },
-            { id: 3, title: "Wikipedia Spiral", desc: "Open Wikipedia, click random, repeat.", time: 30, tags: ["computer", "phone", "think"] },
-            { id: 4, title: "Judge Yelp Reviews", desc: "Read the funniest restaurant reviews.", time: 10, tags: ["phone", "computer", "weird"] },
-            { id: 5, title: "Spotify Autoplay", desc: "Let the algorithm take you to strange places.", time: 30, tags: ["phone", "home"] },
-            { id: 6, title: "Contemplate Space", desc: "Think about how big the universe is.", time: 10, tags: ["home", "think", "weird"] },
-            { id: 7, title: "Read Comments", desc: "Sort YouTube by controversial.", time: 15, tags: ["phone", "computer", "scroll"] },
-            { id: 8, title: "Generate Memes", desc: "Make memes about your life.", time: 10, tags: ["computer", "phone", "weird"] },
-            { id: 9, title: "Obscure Podcast", desc: "Find a podcast about something weird.", time: 30, tags: ["phone", "think"] },
-            { id: 10, title: "Stare Out Window", desc: "Watch strangers do things.", time: 15, tags: ["home", "weird"] },
-            { id: 11, title: "TikTok FYP", desc: "Just let TikTok show you things.", time: 30, tags: ["phone", "scroll"] },
-            { id: 12, title: "Learn Useless Fact", desc: "Google something you\'ll never need.", time: 5, tags: ["phone", "computer", "think"] },
-            { id: 13, title: "Rate Everything", desc: "Go through photos and rate them.", time: 20, tags: ["phone", "weird"] },
-            { id: 14, title: "Discord Void", desc: "Join a random Discord and lurk.", time: 30, tags: ["computer", "scroll"] },
-            { id: 15, title: "Make Lists", desc: "Make lists of things.", time: 10, tags: ["home", "think"] },
-            { id: 16, title: "Internet Archaeology", desc: "Find websites from 1998.", time: 20, tags: ["computer", "weird"] },
-            { id: 17, title: "Reorganize Apps", desc: "Sort your apps by color.", time: 15, tags: ["phone", "weird"] },
-            { id: 18, title: "Read Fanfiction", desc: "Find the weirdest premise.", time: 30, tags: ["computer", "scroll"] }
+            { id: 1, title: "Stare at the Clock", desc: "Just watch time pass. It's oddly satisfying.", time: 5, tags: ["home", "weird", "think"], energy: "low", company: "alone", vibe: "chill" },
+            { id: 2, title: "Deep Reddit Dive", desc: "Find the weirdest subreddit you can.", time: 15, tags: ["phone", "computer", "scroll"], energy: "low", company: "alone", vibe: "chaotic" },
+            { id: 3, title: "Wikipedia Spiral", desc: "Open Wikipedia, click random, repeat.", time: 30, tags: ["computer", "phone", "think"], energy: "low", company: "alone", vibe: "chill" },
+            { id: 4, title: "Judge Yelp Reviews", desc: "Read the funniest restaurant reviews.", time: 10, tags: ["phone", "computer", "weird"], energy: "low", company: "alone", vibe: "chaotic" },
+            { id: 5, title: "Spotify Autoplay", desc: "Let the algorithm take you to strange places.", time: 30, tags: ["phone", "home"], energy: "low", company: "alone", vibe: "chill" },
+            { id: 6, title: "Contemplate Space", desc: "Think about how big the universe is.", time: 10, tags: ["home", "think", "weird"], energy: "low", company: "alone", vibe: "chill" },
+            { id: 7, title: "Read Comments", desc: "Sort YouTube by controversial.", time: 15, tags: ["phone", "computer", "scroll"], energy: "low", company: "alone", vibe: "chaotic" },
+            { id: 8, title: "Generate Memes", desc: "Make memes about your life.", time: 10, tags: ["computer", "phone", "weird"], energy: "medium", company: "alone", vibe: "chaotic" },
+            { id: 9, title: "Obscure Podcast", desc: "Find a podcast about something weird.", time: 30, tags: ["phone", "think"], energy: "low", company: "alone", vibe: "chill" },
+            { id: 10, title: "Stare Out Window", desc: "Watch strangers do things.", time: 15, tags: ["home", "weird"], energy: "low", company: "alone", vibe: "chill" },
+            { id: 11, title: "TikTok FYP", desc: "Just let TikTok show you things.", time: 30, tags: ["phone", "scroll"], energy: "low", company: "alone", vibe: "chaotic" },
+            { id: 12, title: "Learn Useless Fact", desc: "Google something you'll never need.", time: 5, tags: ["phone", "computer", "think"], energy: "low", company: "alone", vibe: "productive" },
+            { id: 13, title: "Rate Everything", desc: "Go through photos and rate them.", time: 20, tags: ["phone", "weird"], energy: "low", company: "alone", vibe: "chaotic" },
+            { id: 14, title: "Discord Void", desc: "Join a random Discord and lurk.", time: 30, tags: ["computer", "scroll"], energy: "low", company: "alone", vibe: "chill" },
+            { id: 15, title: "Make Lists", desc: "Make lists of things.", time: 10, tags: ["home", "think"], energy: "low", company: "alone", vibe: "productive" },
+            { id: 16, title: "Internet Archaeology", desc: "Find websites from 1998.", time: 20, tags: ["computer", "weird"], energy: "medium", company: "alone", vibe: "chaotic" },
+            { id: 17, title: "Reorganize Apps", desc: "Sort your apps by color.", time: 15, tags: ["phone", "weird"], energy: "medium", company: "alone", vibe: "productive" },
+            { id: 18, title: "Read Fanfiction", desc: "Find the weirdest premise.", time: 30, tags: ["computer", "scroll"], energy: "low", company: "alone", vibe: "chaotic" },
+            { id: 19, title: "Do a Puzzle", desc: "Find a puzzle app and solve it.", time: 30, tags: ["phone", "computer"], energy: "medium", company: "alone", vibe: "productive" },
+            { id: 20, title: "Write a Haiku", desc: "Write a terrible poem about nothing.", time: 5, tags: ["home", "think"], energy: "low", company: "alone", vibe: "productive" },
+            { id: 21, title: "Challenge a Friend", desc: "Send a dare to your bestie.", time: 5, tags: ["phone"], energy: "low", company: "friends", vibe: "chaotic" },
+            { id: 22, title: "Play 20 Questions", desc: "Text game with a friend.", time: 15, tags: ["phone"], energy: "low", company: "friends", vibe: "chill" },
+            { id: 23, title: "Photo Battle", desc: "Send each other photo challenges.", time: 20, tags: ["phone"], energy: "high", company: "friends", vibe: "chaotic" },
+            { id: 24, title: "Do Nothing Together", desc: "Exist in the same call. Say nothing.", time: 30, tags: ["phone"], energy: "low", company: "friends", vibe: "chill" },
+            { id: 25, title: "Text Story Chain", desc: "Write a story one text at a time.", time: 20, tags: ["phone"], energy: "medium", company: "friends", vibe: "productive" },
+            { id: 26, title: "Clean Your Room", desc: "Actually organize that chaos.", time: 60, tags: ["home"], energy: "high", company: "alone", vibe: "productive" },
+            { id: 27, title: "Learn One Skill", desc: "Watch a tutorial. Any skill.", time: 60, tags: ["computer", "phone"], energy: "medium", company: "alone", vibe: "productive" },
+            { id: 28, title: "Stretch Break", desc: "Do some basic stretches.", time: 10, tags: ["home"], energy: "medium", company: "alone", vibe: "productive" },
+            { id: 29, title: "Window Shopping", desc: "Browse Amazon without buying.", time: 20, tags: ["phone", "computer"], energy: "low", company: "alone", vibe: "chill" },
+            { id: 30, title: "People Watch", desc: "Make up stories about people online.", time: 15, tags: ["home", "weird"], energy: "low", company: "alone", vibe: "chaotic" }
         ];
 
-        // CLEAN CHALLENGES - no dark stuff
+        // CHALLENGES - expanded list
         const challenges = [
             "Send '🧐' to the last person you texted",
             "Text someone 'I have a secret' and wait",
@@ -567,7 +1062,34 @@
             "Send '😴💤' to someone probably awake",
             "Send 'bestie' to 5 people today",
             "Text 'POV:' and finish it about your day",
-            "Text 'brain go brrr' to a friend"
+            "Text 'brain go brrr' to a friend",
+            "Text 'unsolicited opinion:' and give one",
+            "Send your friend a random emoji and wait for their response",
+            "Text 'I'm at the grocery store' to someone randomly",
+            "Send the name of your favorite food to someone",
+            "Text 'what if we' and finish with a silly idea",
+            "Send '🤡' to your best friend",
+            "Text someone 'I need help' then send a meme",
+            "Send '🗿' to 3 people",
+            "Text a friend your most unpopular opinion",
+            "Send '👻 boo' to someone",
+            "Text 'I'm not mad, I'm just disappointed' to someone",
+            "Send a selfie with your worst face to someone",
+            "Text 'your name' as a contact for yourself and send it to someone",
+            "Send '🌮' to someone and ask what they're thinking about",
+            "Text someone 'I miss you' even if you saw them today",
+            "Send a voice note saying 'this is your daily reminder'",
+            "Text 'I have a theory' then make something up",
+            "Send '✨' to 5 people with no context",
+            "Text 'remember the time' and make up a fake memory",
+            "Send a screenshot of your battery percentage to someone",
+            "Text someone 'your outfit' and rate it 1-10",
+            "Send '🧢' to someone who is definitely not lying",
+            "Text 'I'm not saying I'm bored but' and finish it",
+            "Send a photo of something random in your room",
+            "Text 'unpopular opinion but' and share something",
+            "Send '📸' to someone and wait for them to ask what",
+            "Text 'imagine if' and describe a wild scenario"
         ];
 
         // MICRO ACTIVITIES
@@ -592,14 +1114,61 @@
         let completed = parseInt(localStorage.getItem('boredomCompleted')) || 0;
         let totalXp = parseInt(localStorage.getItem('boredomXp')) || 0;
         let activeFilters = [];
+        
+        // PERSONALIZATION STATE
+        let userEnergy = localStorage.getItem('userEnergy') || 'low';
+        let userCompany = localStorage.getItem('userCompany') || 'alone';
+        let userVibe = localStorage.getItem('userVibe') || 'chill';
+        
+        function setEnergy(level) {
+            userEnergy = level;
+            localStorage.setItem('userEnergy', level);
+            document.querySelectorAll('[data-energy]').forEach(btn => btn.classList.remove('active'));
+            document.querySelector(`[data-energy="${level}"]`).classList.add('active');
+            renderActivities();
+        }
+        
+        function setCompany(company) {
+            userCompany = company;
+            localStorage.setItem('userCompany', company);
+            document.querySelectorAll('[data-company]').forEach(btn => btn.classList.remove('active'));
+            document.querySelector(`[data-company="${company}"]`).classList.add('active');
+            renderActivities();
+        }
+        
+        function setVibe(vibe) {
+            userVibe = vibe;
+            localStorage.setItem('userVibe', vibe);
+            document.querySelectorAll('[data-vibe]').forEach(btn => btn.classList.remove('active'));
+            document.querySelector(`[data-vibe="${vibe}"]`).classList.add('active');
+            renderActivities();
+        }
+        
+        // Initialize personalization buttons
+        document.addEventListener('DOMContentLoaded', function() {
+            document.querySelector(`[data-energy="${userEnergy}"]`)?.classList.add('active');
+            document.querySelector(`[data-company="${userCompany}"]`)?.classList.add('active');
+            document.querySelector(`[data-vibe="${userVibe}"]`)?.classList.add('active');
+        });
         let tttBoard = ['','','','','','','','',''];
         let tttGameOver = false;
-
+        
+        // Memory Game State
+        const memoryIcons = ['🎮', '🎲', '🎯', '🎨', '🎭', '🎪', '🎢', '🎡'];
+        let memoryCards = [];
+        let memoryFlipped = [];
+        let memoryMatched = 0;
+        
+        // Guess Number Game State
+        let targetNumber = Math.floor(Math.random() * 100) + 1;
+        let guessAttempts = 0;
+        
         // INIT
         checkStreak();
         renderActivities();
         updateDisplay();
         renderLeaderboard();
+        getDailyChallenge();
 
         function checkStreak() {
             const today = new Date().toDateString();
@@ -612,10 +1181,29 @@
 
         function renderActivities() {
             let list = activities;
+            
+            // Apply personalization filters
+            const energyLevels = { low: 1, medium: 2, high: 3 };
+            list = list.filter(a => energyLevels[a.energy] <= energyLevels[userEnergy]);
+            
+            // Filter by company
+            if (userCompany === 'friends') {
+                // Show activities that work with friends
+                list = list.filter(a => a.company === 'friends');
+            }
+            
+            // Filter by vibe
+            if (userVibe !== 'chill') {
+                const vibeFiltered = list.filter(a => a.vibe === userVibe);
+                if (vibeFiltered.length > 0) list = vibeFiltered;
+            }
+            
+            // Apply category filters if any
             if (activeFilters.length > 0) {
-                list = activities.filter(a => activeFilters.some(f => a.tags.includes(f)));
+                list = list.filter(a => activeFilters.some(f => a.tags.includes(f)));
                 if (list.length === 0) list = activities;
             }
+            
             list = list.sort(() => Math.random() - 0.5).slice(0, 8);
             document.getElementById('activityGrid').innerHTML = list.map(a => `
                 <div class="activity-card" onclick="doActivity(${a.id})">
@@ -734,8 +1322,20 @@
         function showGame(game) {
             document.querySelectorAll('.game-container').forEach(c => c.style.display = 'none');
             const gameId = 'game' + game.charAt(0).toUpperCase() + game.slice(1);
-            document.getElementById(gameId).style.display = 'block';
-            document.getElementById(gameId).scrollIntoView({ behavior: 'smooth' });
+            const gameEl = document.getElementById(gameId);
+            if (gameEl) {
+                gameEl.style.display = 'block';
+                gameEl.scrollIntoView({ behavior: 'smooth' });
+            }
+            // Initialize games when opened
+            if (game === 'memory') {
+                console.log('Initializing memory game');
+                initMemory();
+            }
+            if (game === 'guess') {
+                console.log('Initializing guess game');
+                initGuess();
+            }
         }
 
         // BRAIN GAME
@@ -746,7 +1346,13 @@
             document.getElementById('brainAnswer').value = '';
             document.getElementById('brainAnswer').focus();
             
-            const questions = [{q:"5+7",a:"12"},{q:"12-4",a:"8"},{q:"3×6",a:"18"},{q:"9×9",a:"81"},{q:"11+11",a:"22"}];
+            const questions = [
+                {q:"5+7",a:"12"},{q:"12-4",a:"8"},{q:"3×6",a:"18"},{q:"9×9",a:"81"},{q:"11+11",a:"22"},
+                {q:"8×7",a:"56"},{q:"15+27",a:"42"},{q:"100-37",a:"63"},{q:"6×8",a:"48"},{q:"14+19",a:"33"},
+                {q:"5×12",a:"60"},{q:"72÷9",a:"8"},{q:"81÷9",a:"9"},{q:"11×5",a:"55"},{q:"25+38",a:"63"},
+                {q:"4×15",a:"60"},{q:"144÷12",a:"12"},{q:"7×13",a:"91"},{q:"22+44",a:"66"},{q:"9×11",a:"99"},
+                {q:"8+8+8",a:"24"},{q:"10×10",a:"100"},{q:"50÷2",a:"25"},{q:"6+6+6+6",a:"24"},{q:"20×3",a:"60"}
+            ];
             const q = questions[Math.floor(Math.random() * questions.length)];
             document.getElementById('brainQuestion').textContent = q.q + ' = ?';
             window.brainAnswer = q.a;
@@ -770,7 +1376,7 @@
             }
         });
 
-        // TICTACTOE
+        // TICTACTOE - Improved bot with strategy
         function playTtt(i) {
             if (tttBoard[i] || tttGameOver) return;
             tttBoard[i] = 'X';
@@ -794,9 +1400,8 @@
             document.getElementById('tttStatus').textContent = 'Bot thinking...';
             
             setTimeout(() => {
-                let empty = tttBoard.map((x,i) => x === '' ? i : -1).filter(x => x !== -1);
-                if (empty.length > 0) {
-                    let botMove = empty[Math.floor(Math.random() * empty.length)];
+                let botMove = getBestMove();
+                if (botMove !== -1) {
                     tttBoard[botMove] = 'O';
                     document.querySelectorAll('.ttt-cell')[botMove].textContent = 'O';
                     document.querySelectorAll('.ttt-cell')[botMove].style.color = '#ff6b35';
@@ -807,9 +1412,47 @@
                         showModal('🤖 Bot Wins!','The machine triumphs.');
                         return;
                     }
-                    document.getElementById('tttStatus').textContent = 'Your turn! (X)';
                 }
+                if (tttBoard.every(x => x !== '')) {
+                    document.getElementById('tttStatus').textContent = '🤝 Draw!';
+                    tttGameOver = true;
+                    showModal('🤝 Draw!','No winners, no losers.');
+                    return;
+                }
+                document.getElementById('tttStatus').textContent = 'Your turn! (X)';
             }, 500);
+        }
+        
+        function getBestMove() {
+            const winPatterns = [[0,1,2],[3,4,5],[6,7,8],[0,3,6],[1,4,7],[2,5,8],[0,4,8],[2,4,6]];
+            
+            // 1. Check if bot can win
+            for (let p of winPatterns) {
+                let [a,b,c] = p;
+                if (tttBoard[a] === 'O' && tttBoard[b] === 'O' && tttBoard[c] === '') return c;
+                if (tttBoard[a] === 'O' && tttBoard[c] === 'O' && tttBoard[b] === '') return b;
+                if (tttBoard[b] === 'O' && tttBoard[c] === 'O' && tttBoard[a] === '') return a;
+            }
+            
+            // 2. Block player's winning move
+            for (let p of winPatterns) {
+                let [a,b,c] = p;
+                if (tttBoard[a] === 'X' && tttBoard[b] === 'X' && tttBoard[c] === '') return c;
+                if (tttBoard[a] === 'X' && tttBoard[c] === 'X' && tttBoard[b] === '') return b;
+                if (tttBoard[b] === 'X' && tttBoard[c] === 'X' && tttBoard[a] === '') return a;
+            }
+            
+            // 3. Take center if available
+            if (tttBoard[4] === '') return 4;
+            
+            // 4. Take corners
+            const corners = [0,2,6,8];
+            const emptyCorners = corners.filter(i => tttBoard[i] === '');
+            if (emptyCorners.length > 0) return emptyCorners[Math.floor(Math.random() * emptyCorners.length)];
+            
+            // 5. Take any available space
+            let empty = tttBoard.map((x,i) => x === '' ? i : -1).filter(x => x !== -1);
+            return empty.length > 0 ? empty[Math.floor(Math.random() * empty.length)] : -1;
         }
 
         function checkWinner(player) {
@@ -824,12 +1467,116 @@
             document.getElementById('tttStatus').textContent = 'Your turn! (X)';
         }
 
+        // MEMORY GAME
+        function initMemory() {
+            console.log('initMemory called');
+            memoryCards = [...memoryIcons, ...memoryIcons].sort(() => Math.random() - 0.5);
+            memoryFlipped = [];
+            memoryMatched = 0;
+            document.getElementById('memoryScore').textContent = '0';
+            const grid = document.getElementById('memoryGrid');
+            if (!grid) {
+                console.error('memoryGrid not found!');
+                return;
+            }
+            grid.innerHTML = '';
+            for (let i = 0; i < memoryCards.length; i++) {
+                let card = document.createElement('div');
+                card.className = 'memory-card';
+                card.textContent = '❓';
+                card.style.cssText = 'background: var(--dark); padding: 20px; border-radius: 12px; cursor: pointer; font-size: 2rem; text-align: center;';
+                card.onclick = function() { flipCard(i); };
+                grid.appendChild(card);
+            }
+            console.log('Memory game initialized, cards:', memoryCards);
+        }
+        
+        function flipCard(i) {
+            if (memoryFlipped.length >= 2 || memoryFlipped.includes(i) || memoryMatched === memoryIcons.length) return;
+            memoryFlipped.push(i);
+            const cards = document.querySelectorAll('.memory-card');
+            cards[i].textContent = memoryCards[i];
+            cards[i].style.background = 'var(--card-hover)';
+            
+            if (memoryFlipped.length === 2) {
+                const [first, second] = memoryFlipped;
+                if (memoryCards[first] === memoryCards[second]) {
+                    memoryMatched += 2;
+                    document.getElementById('memoryScore').textContent = memoryMatched;
+                    memoryFlipped = [];
+                    if (memoryMatched === memoryIcons.length) {
+                        showModal('🎉 Memory Master!','You found all pairs!');
+                        confettiEffect();
+                    }
+                } else {
+                    setTimeout(() => {
+                        cards[first].textContent = '❓';
+                        cards[first].style.background = 'var(--dark)';
+                        cards[second].textContent = '❓';
+                        cards[second].style.background = 'var(--dark)';
+                        memoryFlipped = [];
+                    }, 800);
+                }
+            }
+        }
+
+        // GUESS NUMBER GAME
+        function initGuess() {
+            targetNumber = Math.floor(Math.random() * 100) + 1;
+            guessAttempts = 0;
+            document.getElementById('guessAttempts').textContent = '0';
+            document.getElementById('guessResult').textContent = '';
+            document.getElementById('guessInput').value = '';
+        }
+        
+        document.getElementById('guessInput').addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') makeGuess();
+        });
+        
+        function makeGuess() {
+            const guess = parseInt(document.getElementById('guessInput').value);
+            if (!guess || guess < 1 || guess > 100) {
+                document.getElementById('guessResult').textContent = 'Enter a number 1-100!';
+                document.getElementById('guessResult').style.color = '#ef4444';
+                return;
+            }
+            guessAttempts++;
+            document.getElementById('guessAttempts').textContent = guessAttempts;
+            
+            if (guess === targetNumber) {
+                document.getElementById('guessResult').textContent = `🎉 Got it! It was ${targetNumber}!`;
+                document.getElementById('guessResult').style.color = '#00ff88';
+                showModal('🎉 You Win!','Found it in ' + guessAttempts + ' guesses!');
+                confettiEffect();
+            } else if (guess < targetNumber) {
+                document.getElementById('guessResult').textContent = '📈 Too low!';
+                document.getElementById('guessResult').style.color = '#f7c531';
+            } else {
+                document.getElementById('guessResult').textContent = '📉 Too high!';
+                document.getElementById('guessResult').style.color = '#f7c531';
+            }
+        }
+
         // QUIZ
         function showQuiz(n) {
             document.getElementById('quiz1').style.display = 'none';
             document.getElementById('quiz2').style.display = 'none';
             document.getElementById('quiz3').style.display = 'none';
-            document.getElementById('quiz' + n).style.display = 'block';
+            document.getElementById('quiz4').style.display = 'none';
+            document.getElementById('quiz5').style.display = 'none';
+            document.getElementById('quiz6').style.display = 'none';
+            document.getElementById('quiz7').style.display = 'none';
+            document.getElementById('quiz8').style.display = 'none';
+            document.getElementById('quizComplete').style.display = 'none';
+            if (n === 'complete') {
+                document.getElementById('quizComplete').style.display = 'block';
+            } else {
+                document.getElementById('quiz' + n).style.display = 'block';
+            }
+        }
+        
+        function resetQuiz() {
+            showQuiz(1);
         }
 
         // EFFECTS - Multiple options!
@@ -907,3 +1654,9 @@
     </script>
 </body>
 </html>
+
+
+
+
+
+
