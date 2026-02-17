@@ -236,30 +236,56 @@
 
     <!-- HERO -->
     <div class="hero">
-        <h1>What to Do When You're Bored? 🎯</h1>
-        <p class="subtitle">Instant ideas for when you're bored at night, at home, or with friends. No money needed. 100+ activities & games.</p>
+        <h1>You're Bored. Don't Scroll TikTok Again.</h1>
+        <p class="subtitle">Press the button. I dare you. Instant ideas that actually beat boredom.</p>
         <button class="big-btn" onclick="imBored()">😫 I'M BORED</button>
     </div>
 
     <!-- VISIBLE SEO CONTENT - Key keyword sections for Google -->
-    <div class="container" style="padding: 30px 20px;">
-        <div style="background: var(--card-bg); border-radius: 20px; padding: 30px; margin-bottom: 30px;">
-            <h2 style="color: var(--accent); font-size: 1.8rem; margin-bottom: 20px;">😴 What to Do When Bored at Night</h2>
-            <p style="color: var(--muted); line-height: 1.8; margin-bottom: 15px;">Late night boredom hits different. When you can't sleep and need <strong>things to do at 2am</strong>, we've got you covered. Whether you're lying awake wondering <strong>what to do when you're bored at night</strong>, or looking for <strong>fun things to do at 2am</strong>, these activities don't involve scrolling Instagram until your eyes bleed. Try a Wikipedia spiral, contemplate the universe, or challenge yourself to our brain games. Nighttime is when creativity strikes - embrace the quiet.</p>
-            
-            <h2 style="color: var(--accent); font-size: 1.8rem; margin: 30px 0 20px;">🏠 Things to Do When Bored at Home</h2>
-            <p style="color: var(--muted); line-height: 1.8; margin-bottom: 15px;">Stuck inside with nothing to do? Being home bored doesn't have to mean watching Netflix for the third time. From <strong>things to do when bored and alone in your room</strong> to activities for when you're home with friends, we cover every scenario. Try the "Stay Challenge" - can you actually stay on this website? It's harder than it sounds. Or reorganize your entire phone, learn a useless fact, or start a Google Maps adventure to somewhere you've never been.</p>
-            
-            <h2 style="color: var(--accent); font-size: 1.8rem; margin: 30px 0 20px;">👶 What to Do When Bored as a Teenager</h2>
-            <p style="color: var(--muted); line-height: 1.8; margin-bottom: 15px;">Being a teenager with nothing to do is a special kind of boredom. You've done the TikTok scroll, replied to all your snaps, and now you're just... existing. Whether you're looking for <strong>things to do when bored with friends</strong> or solo activities that don't require money or leaving your room, BoredomSolver speaks your language. Our challenges are perfect for sending to friends, and the "dare" format fits perfectly with group chats.</p>
-            
-            <h2 style="color: var(--accent); font-size: 1.8rem; margin: 30px 0 20px;">💰 What to Do When Bored and Have No Money</h2>
-            <p style="color: var(--muted); line-height: 1.8; margin-bottom: 15px;">Zero budget? No problem. All our activities are free - because boredom shouldn't cost anything. From <strong>things to do when bored with no money</strong> to creative ways to waste time without spending a dime, we've tested everything. The best things in life are free, and the most boring activities are too - embrace the art of doing absolutely nothing productive. It's genuinely therapeutic.</p>
-            
-            <h2 style="color: var(--accent); font-size: 1.8rem; margin: 30px 0 20px;">🎮 Fun Things to Do When Bored</h2>
-            <p style="color: var(--muted); line-height: 1.8; margin-bottom: 15px;">Looking for <strong>fun things to do when you're bored</strong>? Our random challenge generator creates instant entertainment - send a dare to a friend, try our brain games, or compete on leaderboards. Whether you want chaotic energy or chill vibes, there's something here for every mood. The key to having fun when bored is accepting that sometimes doing nothing is the entire point.</p>
+    <div class="container" style="padding: 20px;">
+        <select id="seoDropdown" onchange="showSeoContent(this.value)" style="width: 100%; padding: 15px 20px; font-size: 1.1rem; border-radius: 15px; border: 2px solid var(--accent); background: var(--card-bg); color: var(--light); cursor: pointer; margin-bottom: 20px;">
+            <option value="night">😴 What to Do When Bored at Night</option>
+            <option value="home">🏠 Things to Do When Bored at Home</option>
+            <option value="teen">👶 What to Do When Bored as a Teenager</option>
+            <option value="money">💰 What to Do When Bored and Have No Money</option>
+            <option value="fun">🎮 Fun Things to Do When Bored</option>
+        </select>
+        
+        <div id="seoContent" style="background: var(--card-bg); border-radius: 20px; padding: 25px; min-height: 200px;">
+            <h2 id="seoTitle" style="color: var(--accent); font-size: 1.6rem; margin-bottom: 15px;">😴 What to Do When Bored at Night</h2>
+            <p id="seoText" style="color: var(--muted); line-height: 1.8;">Late night boredom hits different. When you can't sleep and need <strong>things to do at 2am</strong>, we've got you covered. Whether you're lying awake wondering <strong>what to do when you're bored at night</strong>, or looking for <strong>fun things to do at 2am</strong>, these activities don't involve scrolling Instagram until your eyes bleed. Try a Wikipedia spiral, contemplate the universe, or challenge yourself to our brain games. Nighttime is when creativity strikes - embrace the quiet.</p>
         </div>
     </div>
+    
+    <script>
+    const seoData = {
+        night: {
+            title: "😴 What to Do When Bored at Night",
+            text: "Late night boredom hits different. When you can't sleep and need <strong>things to do at 2am</strong>, we've got you covered. Whether you're lying awake wondering <strong>what to do when you're bored at night</strong>, or looking for <strong>fun things to do at 2am</strong>, these activities don't involve scrolling Instagram until your eyes bleed. Try a Wikipedia spiral, contemplate the universe, or challenge yourself to our brain games. Nighttime is when creativity strikes - embrace the quiet."
+        },
+        home: {
+            title: "🏠 Things to Do When Bored at Home",
+            text: "Stuck inside with nothing to do? Being home bored doesn't have to mean watching Netflix for the third time. From <strong>things to do when bored and alone in your room</strong> to activities for when you're home with friends, we cover every scenario. Try the 'Stay Challenge' - can you actually stay on this website? It's harder than it sounds. Or reorganize your entire phone, learn a useless fact, or start a Google Maps adventure to somewhere you've never been."
+        },
+        teen: {
+            title: "👶 What to Do When Bored as a Teenager",
+            text: "Being a teenager with nothing to do is a special kind of boredom. You've done the TikTok scroll, replied to all your snaps, and now you're just... existing. Whether you're looking for <strong>things to do when bored with friends</strong> or solo activities that don't require money or leaving your room, BoredomSolver speaks your language. Our challenges are perfect for sending to friends, and the 'dare' format fits perfectly with group chats."
+        },
+        money: {
+            title: "💰 What to Do When Bored and Have No Money",
+            text: "Zero budget? No problem. All our activities are free - because boredom shouldn't cost anything. From <strong>things to do when bored with no money</strong> to creative ways to waste time without spending a dime, we've tested everything. The best things in life are free, and the most boring activities are too - embrace the art of doing absolutely nothing productive. It's genuinely therapeutic."
+        },
+        fun: {
+            title: "🎮 Fun Things to Do When Bored",
+            text: "Looking for <strong>fun things to do when you're bored</strong>? Our random challenge generator creates instant entertainment - send a dare to a friend, try our brain games, or compete on leaderboards. Whether you want chaotic energy or chill vibes, there's something here for every mood. The key to having fun when bored is accepting that sometimes doing nothing is the entire point."
+        }
+    };
+    
+    function showSeoContent(key) {
+        document.getElementById('seoTitle').textContent = seoData[key].title;
+        document.getElementById('seoText').innerHTML = seoData[key].text;
+    }
+    </script>
 
     <!-- PERSONALIZATION -->
     <div class="container">
