@@ -338,16 +338,6 @@
             <div class="quick-card" onclick="getProductive()"><div class="icon">💪</div><div class="time">DO SOMETHING</div><div class="label">Productive</div></div>
         </div>
 
-        <!-- FILTERS -->
-        <div class="filters">
-            <div class="filter-chip" onclick="toggleFilter(this, 'home')">🏠 Home</div>
-            <div class="filter-chip" onclick="toggleFilter(this, 'phone')">📱 Phone</div>
-            <div class="filter-chip" onclick="toggleFilter(this, 'computer')">💻 Computer</div>
-            <div class="filter-chip" onclick="toggleFilter(this, 'weird')">🤪 Weird</div>
-            <div class="filter-chip" onclick="toggleFilter(this, 'scroll')">📜 Scroll</div>
-            <div class="filter-chip" onclick="toggleFilter(this, 'think')">🧠 Think</div>
-        </div>
-
         <!-- CHALLENGE -->
         <div class="challenge-box" id="challengeBox">
             <h2>🎲 Random Chaos Challenge</h2>
@@ -529,91 +519,51 @@
         <div class="section-title">🔥 More Things to Do</div>
         <div class="activity-grid" id="activityGrid"></div>
 
-        <!-- SEO LINKS -->
-        <div style="margin: 30px 0; padding: 20px; background: var(--card-bg); border-radius: 15px;">
-            <p style="color: var(--muted); margin-bottom: 15px;">📚 <strong>More ways to be bored:</strong></p>
-            <div style="display: flex; flex-wrap: wrap; gap: 10px;">
-                <a href="things-to-do-when-bored.html" style="color: var(--accent);">📖 101 Things to Do When Bored</a>
-                <a href="things-to-do-when-bored-at-home.html" style="color: var(--accent);">50 Things to Do at Home</a>
-                <a href="things-to-do-when-bored-on-phone.html" style="color: var(--accent);">Bored on Phone</a>
-                <a href="things-to-do-when-bored-at-night.html" style="color: var(--accent);">Bored at Night</a>
-                <a href="fun-5-minute-activities.html" style="color: var(--accent);">5-Minute Activities</a>
-                <a href="things-to-do-when-bored-with-friends.html" style="color: var(--accent);">With Friends</a>
-            </div>
-        </div>
-
         <!-- PERSONALIZATION -->
-                <li>Contemplate the universe and get mildly existential</li>
-                <li>Organize your phone photos by color (weirdly satisfying)</li>
-                <li>Write a poem so bad it's funny</li>
-                <li>Watch YouTube essay videos about random topics</li>
-            </ul>
-            
-            <h3 style="color: var(--light); font-size: 1.4rem; margin: 30px 0 15px;">🏠 Things to Do When Bored at Home</h3>
-            <p style="color: var(--muted); line-height: 1.8; margin-bottom: 15px;">Being stuck at home doesn't have to be boring. Whether it's a sick day, weekend, or just one of those days, here's how to kill time without leaving your couch:</p>
-            <ul style="color: var(--muted); margin-left: 20px; line-height: 2;">
-                <li>Stare at the clock and watch time pass (oddly hypnotic)</li>
-                <li>Sort your apps by color, then size, then regret it</li>
-                <li>Read the strangest Amazon 1-star reviews</li>
-                <li>Explore Google Maps street view places you'll never visit</li>
-                <li>Make playlists for fictional moods you don't have</li>
-                <li>Go through old photos and rate them 1-10</li>
-            </ul>
-            
-            <h3 style="color: var(--light); font-size: 1.4rem; margin: 30px 0 15px;">💰 Things to Do When Bored and Have No Money</h3>
-            <p style="color: var(--muted); line-height: 1.8; margin-bottom: 15px;">Zero budget? No problem. The best boredom busters are free:</p>
-            <ul style="color: var(--muted); margin-left: 20px; line-height: 2;">
-                <li>Challenge yourself to not blink for 60 seconds (you'll fail)</li>
-                <li>Learn to juggle with anything—scarves, socks, your phone (carefully)</li>
-                <li>Write a text to someone but don't send it (emotional release)</li>
-                <li>Make up a new sport with invented rules</li>
-                <li>Rate every photo in your camera roll</li>
-                <li>Invent conspiracy theories about your houseplants</li>
-            </ul>
-            
-            <h3 style="color: var(--light); font-size: 1.4rem; margin: 30px 0 15px;">👶 What to Do When Bored as a Teenager</h3>
-            <p style="color: var(--muted); line-height: 1.8; margin-bottom: 15px;">Being a teenager with nothing to do is a universal experience. Here's how to survive:</p>
-            <ul style="color: var(--muted); margin-left: 20px; line-height: 2;">
-                <li>Scroll Reddit's most controversial posts</li>
-                <li>Create a meme about your exact current situation</li>
-                <li>Text your friends weird things and see who responds</li>
-                <li>Watch "try not to laugh" compilations (you will fail)</li>
-                <li>Change your profile picture to something random</li>
-                <li>Deep dive into obscure Subreddits with under 100 members</li>
-            </ul>
-            
-            <h3 style="color: var(--light); font-size: 1.4rem; margin: 30px 0 15px;">🌙 Fun Things to Do at 2am When You Can't Sleep</h3>
-            <p style="color: var(--muted); line-height: 1.8; margin-bottom: 15px;">2am and wide awake? The world is your oyster (or your oyster of existential dread):</p>
-            <ul style="color: var(--muted); margin-left: 20px; line-height: 2;">
-                <li>Listen to lo-fi beats and pretend you're in a study session</li>
-                <li>Google "what would happen if" questions</li>
-                <li>Watch cooking videos you'll never cook</li>
-                <li>Think about your hypothetical other life in another country</li>
-                <li>Look up at the ceiling and name the stains</li>
-                <li>Let Spotify's autoplay take you on a musical journey</li>
-            </ul>
-            
-            <h3 style="color: var(--light); font-size: 1.4rem; margin: 30px 0 15px;">🎮 Interactive Boredom Busters</h3>
-            <p style="color: var(--muted); line-height: 1.8; margin-bottom: 15px;">Want more than just ideas? BoredomSolver has built-in games and challenges:</p>
-            <ul style="color: var(--muted); margin-left: 20px; line-height: 2;">
-                <li>Press the big "I'm Bored" button for instant random activities</li>
-                <li>Try the Stay Challenge—see how long you can last on the site</li>
-                <li>Play Tic-Tac-Toe against our bot</li>
-                <li>Take the 15-second Brain Sprint challenge</li>
-                <li>Play Memory Match and test your brain</li>
-                <li>Accept daily chaos challenges</li>
-            </ul>
-            
-            <div style="background: var(--card-bg); padding: 25px; border-radius: 15px; margin: 30px 0; border-left: 4px solid var(--accent);">
-                <h4 style="color: var(--accent); margin-bottom: 10px;">💡 Pro Tip: Embrace the Boredom</h4>
-                <p style="color: var(--muted); line-height: 1.8;">Research shows that boredom can actually boost creativity and problem-solving abilities. Instead of fighting it, use this site to lean into it. Sometimes doing absolutely nothing is exactly what your brain needs. Productivity is overrated.</p>
+    <div class="container">
+        <div class="personalize-bar">
+            <div class="personalize-group">
+                <span class="personalize-label">Energy:</span>
+                <button class="personalize-btn active" onclick="setEnergy('low')" data-energy="low">🪑 Low</button>
+                <button class="personalize-btn" onclick="setEnergy('medium')" data-energy="medium">🚶 Medium</button>
+                <button class="personalize-btn" onclick="setEnergy('high')" data-energy="high">🏃 High</button>
             </div>
-            
-            <p style="color: var(--muted); line-height: 1.8; margin-top: 25px;">Stop searching for "what should I do when I'm bored" and start doing. Whether you're looking for <strong>things to do when bored at night</strong>, <strong>things to do when bored at home</strong>, or <strong>fun things to do at 2am</strong>, BoredomSolver has you covered. Bookmark this page and beat boredom forever. 🎯</p>
+            <div class="personalize-group">
+                <span class="personalize-label">With:</span>
+                <button class="personalize-btn active" onclick="setCompany('alone')" data-company="alone">🙈 Alone</button>
+                <button class="personalize-btn" onclick="setCompany('friends')" data-company="friends">👯 Friends</button>
+            </div>
+            <div class="personalize-group">
+                <span class="personalize-label">Vibe:</span>
+                <button class="personalize-btn active" onclick="setVibe('chill')" data-vibe="chill">😌 Chill</button>
+                <button class="personalize-btn" onclick="setVibe('chaotic')" data-vibe="chaotic">🌀 Chaotic</button>
+                <button class="personalize-btn" onclick="setVibe('productive')" data-vibe="productive">💪 Productive</button>
+            </div>
+            <div class="personalize-group">
+                <span class="personalize-label">Where:</span>
+                <button class="personalize-btn" onclick="toggleFilter(null, 'home')">🏠 Home</button>
+                <button class="personalize-btn" onclick="toggleFilter(null, 'phone')">📱 Phone</button>
+                <button class="personalize-btn" onclick="toggleFilter(null, 'computer')">💻 Computer</button>
+                <button class="personalize-btn" onclick="toggleFilter(null, 'weird')">🤪 Weird</button>
+            </div>
         </div>
+    </div>
 
-        <!-- USER -->
-        <div class="section-title">👤 Track Your Boredom</div>
+    <!-- MORE WAYS -->
+    <div class="container" style="padding: 0 20px;">
+        <div style="background: var(--card-bg); border-radius: 15px; padding: 15px; margin-bottom: 20px;">
+            <p style="color: var(--muted); margin-bottom: 10px;"><strong>📚 More ways to be bored:</strong></p>
+            <div style="display: flex; flex-wrap: wrap; gap: 10px;">
+                <a href="things-to-do-when-bored-at-home.html" style="color: var(--accent);">🏠 Home</a>
+                <a href="things-to-do-when-bored-on-phone.html" style="color: var(--accent);">📱 Phone</a>
+                <a href="things-to-do-when-bored-at-night.html" style="color: var(--accent);">🌙 Night</a>
+                <a href="things-to-do-when-bored-with-friends.html" style="color: var(--accent);">👯 Friends</a>
+                <a href="fun-5-minute-activities.html" style="color: var(--accent);">⏱️ 5 Min</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- CLOCK -->
         <div class="user-dash">
             <div id="loginForm">
                 <div class="login-form">
