@@ -3,25 +3,89 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Things to Do When You're Bored (At Night, At Home, With Friends, 2am) | BoredomSolver - 100+ Free Ideas</title>
-    <meta name="description" content="Instant boredom-busting ideas! What to do when bored at night, at home, alone, or with friends. 100+ free activities, games, and challenges. Updated daily.">
+    <title>BoredomSolver - 100+ Things to Do When You're Bored</title>
+    <meta name="description" content="Bored? Get instant activity ideas, free games, and challenges. Things to do when bored at night, at home, with friends, or at 2am.">
     <meta name="google-site-verification" content="zJQkX047rbHp0vz_t1TouinfPO2nA1bJXkm_ofqOM4c" />
     <link rel="canonical" href="https://boredom-solver-rho.vercel.app/">
     <link rel="icon" href="/favicon.svg" type="image/svg+xml">
     
     <!-- Open Graph -->
     <meta property="og:type" content="website">
-    <meta property="og:title" content="Things to Do When You're Bored - 100+ Free Ideas (Night, Home, 2am, With Friends)">
-    <meta property="og:description" content="Instant boredom-busting ideas! What to do when bored at night, at home, alone, or with friends. Try our games & challenges!">
+    <meta property="og:title" content="BoredomSolver - 100+ Things to Do When You're Bored">
+    <meta property="og:description" content="Bored? Get instant activity ideas, free games, and challenges for when you're bored at night, at home, or with friends.">
     <meta property="og:image" content="https://boredom-solver-rho.vercel.app/og.png">
     <meta property="og:url" content="https://boredom-solver-rho.vercel.app/">
     <meta property="og:site_name" content="BoredomSolver">
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Things to Do When You're Bored - 100+ Free Ideas | BoredomSolver">
-    <meta name="twitter:description" content="Instant boredom-busting ideas for when you're bored at night, at home, alone, or with friends!">
+    <meta name="twitter:title" content="BoredomSolver - 100+ Things to Do When You're Bored">
+    <meta name="twitter:description" content="Bored? Get instant activity ideas, free games, and challenges for when you're bored at night, at home, or with friends.">
     <meta name="twitter:image" content="https://boredom-solver-rho.vercel.app/og.png">
+    <!-- Structured Data: FAQ Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "What to do when you're bored at night?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Try a Wikipedia spiral, organize your phone photos by color, write a funny poem, watch YouTube essay videos, listen to lo-fi beats, or play browser games. BoredomSolver has 100+ free activities for nighttime boredom."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What are fun things to do when bored at home?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Sort your apps by color, read weird Amazon reviews, explore Google Maps street view, make playlists for fictional moods, rate old photos, or play online games like Tic-Tac-Toe and Memory Match."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What to do when bored with no money?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "The best boredom busters are free: challenge yourself to not blink for 60 seconds, learn to juggle with household items, make up a new sport, rate every photo in your camera roll, or try free online brain games."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What to do at 2am when you can't sleep?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Listen to lo-fi beats, Google 'what would happen if' questions, watch cooking videos, think about your hypothetical life in another country, or let Spotify autoplay take you on a musical journey."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What to do when bored as a teenager?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Create memes about your current situation, text friends weird things, watch try-not-to-laugh compilations, deep dive into obscure subreddits, or try interactive online challenges and games."
+                }
+            }
+        ]
+    }
+    </script>
+    <!-- Structured Data: WebSite -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "BoredomSolver",
+        "url": "https://boredom-solver-rho.vercel.app/",
+        "description": "100+ free boredom-busting activities, games, and challenges for when you're bored at night, at home, or with friends.",
+        "potentialAction": {
+            "@type": "SearchAction",
+            "target": "https://boredom-solver-rho.vercel.app/?q={search_term_string}",
+            "query-input": "required name=search_term_string"
+        }
+    }
+    </script>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         :root {
@@ -241,54 +305,106 @@
         <button class="big-btn" onclick="imBored()">😫 I'M BORED</button>
     </div>
 
-    <!-- VISIBLE SEO CONTENT - Key keyword sections for Google -->
+    <!-- SEO CONTENT - Static HTML sections for Google crawling -->
     <div class="container" style="padding: 20px;">
-        <select id="seoDropdown" onchange="showSeoContent(this.value)" style="width: 100%; padding: 15px 20px; font-size: 1.1rem; border-radius: 15px; border: 2px solid var(--accent); background: var(--card-bg); color: var(--light); cursor: pointer; margin-bottom: 20px;">
-            <option value="night">😴 What to Do When Bored at Night</option>
-            <option value="home">🏠 Things to Do When Bored at Home</option>
-            <option value="money">💰 What to Do When Bored and Have No Money</option>
-            <option value="teen">👶 What to Do When Bored as a Teenager</option>
-            <option value="lateNight">🌙 Fun Things to Do at 2am</option>
-            <option value="interactive">🎮 Interactive Games & Challenges</option>
-        </select>
-        
-        <div id="seoContent" style="background: var(--card-bg); border-radius: 20px; padding: 25px; min-height: 200px;">
-            <h2 id="seoTitle" style="color: var(--accent); font-size: 1.6rem; margin-bottom: 15px;">😴 What to Do When Bored at Night</h2>
-            <p id="seoText" style="color: var(--muted); line-height: 1.8;">Late night boredom hits different. When you can't sleep and need <strong>things to do at 2am</strong>, we've got you covered. Whether you're lying awake wondering <strong>what to do when you're bored at night</strong>, or looking for <strong>fun things to do at 2am</strong>, these activities don't involve scrolling Instagram until your eyes bleed. Try a Wikipedia spiral, contemplate the universe, or challenge yourself to our brain games. Nighttime is when creativity strikes - embrace the quiet.</p>
+        <div class="seo-tabs" style="display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 20px;">
+            <button class="filter-chip active" onclick="showSeoTab('night')">😴 Bored at Night</button>
+            <button class="filter-chip" onclick="showSeoTab('home')">🏠 Bored at Home</button>
+            <button class="filter-chip" onclick="showSeoTab('money')">💰 No Money</button>
+            <button class="filter-chip" onclick="showSeoTab('teen')">👶 Teenagers</button>
+            <button class="filter-chip" onclick="showSeoTab('lateNight')">🌙 2am Ideas</button>
+            <button class="filter-chip" onclick="showSeoTab('interactive')">🎮 Games</button>
+        </div>
+
+        <div id="seoTab-night" class="seo-section" style="background: var(--card-bg); border-radius: 20px; padding: 25px;">
+            <h2 style="color: var(--accent); font-size: 1.6rem; margin-bottom: 15px;">What to Do When Bored at Night</h2>
+            <p style="color: var(--muted); line-height: 1.8;">Late night boredom hits different. When you can't sleep and need <strong>things to do at 2am</strong>, we've got you covered.</p>
+            <ul style="color: var(--muted); line-height: 2; padding-left: 20px; margin-top: 10px;">
+                <li>Contemplate the universe and get mildly existential</li>
+                <li>Organize your phone photos by color (weirdly satisfying)</li>
+                <li>Write a poem so bad it's funny</li>
+                <li>Watch YouTube essay videos about random topics</li>
+                <li>Try a Wikipedia spiral - click random and see where you end up</li>
+                <li>Listen to lo-fi beats and pretend you're in a study session</li>
+            </ul>
+            <p style="margin-top: 15px;"><a href="things-to-do-when-bored-at-night.html" style="color: var(--accent);">Read more night activity ideas &rarr;</a></p>
+        </div>
+
+        <div id="seoTab-home" class="seo-section" style="background: var(--card-bg); border-radius: 20px; padding: 25px; display: none;">
+            <h2 style="color: var(--accent); font-size: 1.6rem; margin-bottom: 15px;">Things to Do When Bored at Home</h2>
+            <p style="color: var(--muted); line-height: 1.8;">Being stuck at home doesn't have to be boring. Here's how to kill time without leaving your couch:</p>
+            <ul style="color: var(--muted); line-height: 2; padding-left: 20px; margin-top: 10px;">
+                <li>Stare at the clock and watch time pass (oddly hypnotic)</li>
+                <li>Sort your apps by color, then size, then regret it</li>
+                <li>Read the strangest Amazon 1-star reviews</li>
+                <li>Explore Google Maps street view places you'll never visit</li>
+                <li>Make playlists for fictional moods you don't have</li>
+                <li>Go through old photos and rate them 1-10</li>
+            </ul>
+            <p style="margin-top: 15px;"><a href="things-to-do-when-bored-at-home.html" style="color: var(--accent);">Read more home activity ideas &rarr;</a></p>
+        </div>
+
+        <div id="seoTab-money" class="seo-section" style="background: var(--card-bg); border-radius: 20px; padding: 25px; display: none;">
+            <h2 style="color: var(--accent); font-size: 1.6rem; margin-bottom: 15px;">What to Do When Bored and Have No Money</h2>
+            <p style="color: var(--muted); line-height: 1.8;">Zero budget? No problem. The best boredom busters are free:</p>
+            <ul style="color: var(--muted); line-height: 2; padding-left: 20px; margin-top: 10px;">
+                <li>Challenge yourself to not blink for 60 seconds (you'll fail)</li>
+                <li>Learn to juggle with anything - scarves, socks, your phone (carefully)</li>
+                <li>Write a text to someone but don't send it (emotional release)</li>
+                <li>Make up a new sport with invented rules</li>
+                <li>Rate every photo in your camera roll</li>
+                <li>Invent conspiracy theories about your houseplants</li>
+            </ul>
+        </div>
+
+        <div id="seoTab-teen" class="seo-section" style="background: var(--card-bg); border-radius: 20px; padding: 25px; display: none;">
+            <h2 style="color: var(--accent); font-size: 1.6rem; margin-bottom: 15px;">What to Do When Bored as a Teenager</h2>
+            <p style="color: var(--muted); line-height: 1.8;">Being a teenager with nothing to do is a universal experience. Here's how to survive:</p>
+            <ul style="color: var(--muted); line-height: 2; padding-left: 20px; margin-top: 10px;">
+                <li>Scroll Reddit's most controversial posts</li>
+                <li>Create a meme about your exact current situation</li>
+                <li>Text your friends weird things and see who responds</li>
+                <li>Watch 'try not to laugh' compilations (you will fail)</li>
+                <li>Change your profile picture to something random</li>
+                <li>Deep dive into obscure Subreddits with under 100 members</li>
+            </ul>
+        </div>
+
+        <div id="seoTab-lateNight" class="seo-section" style="background: var(--card-bg); border-radius: 20px; padding: 25px; display: none;">
+            <h2 style="color: var(--accent); font-size: 1.6rem; margin-bottom: 15px;">Fun Things to Do at 2am When You Can't Sleep</h2>
+            <p style="color: var(--muted); line-height: 1.8;">2am and wide awake? The world is your oyster (or your oyster of existential dread):</p>
+            <ul style="color: var(--muted); line-height: 2; padding-left: 20px; margin-top: 10px;">
+                <li>Listen to lo-fi beats and pretend you're in a study session</li>
+                <li>Google 'what would happen if' questions</li>
+                <li>Watch cooking videos you'll never cook</li>
+                <li>Think about your hypothetical other life in another country</li>
+                <li>Look up at the ceiling and name the stains</li>
+                <li>Let Spotify's autoplay take you on a musical journey</li>
+            </ul>
+            <p style="margin-top: 15px;"><a href="things-to-do-when-you-cant-sleep.html" style="color: var(--accent);">Read more late night ideas &rarr;</a></p>
+        </div>
+
+        <div id="seoTab-interactive" class="seo-section" style="background: var(--card-bg); border-radius: 20px; padding: 25px; display: none;">
+            <h2 style="color: var(--accent); font-size: 1.6rem; margin-bottom: 15px;">Interactive Boredom Busters - Free Online Games</h2>
+            <p style="color: var(--muted); line-height: 1.8;">Want more than just ideas? BoredomSolver has built-in games and challenges:</p>
+            <ul style="color: var(--muted); line-height: 2; padding-left: 20px; margin-top: 10px;">
+                <li>Press the big 'I'm Bored' button for instant random activities</li>
+                <li>Try the Stay Challenge - see how long you can last on the site</li>
+                <li>Play Tic-Tac-Toe against our bot</li>
+                <li>Take the 15-second Brain Sprint challenge</li>
+                <li>Play Memory Match and test your brain</li>
+                <li>Accept daily chaos challenges</li>
+            </ul>
+            <p style="margin-top: 15px;"><a href="fun-5-minute-activities.html" style="color: var(--accent);">Browse 5-minute activities &rarr;</a></p>
         </div>
     </div>
-    
+
     <script>
-    const seoData = {
-        night: {
-            title: "😴 What to Do When Bored at Night",
-            text: "<p>Late night boredom hits different. When you can't sleep and need <strong>things to do at 2am</strong>, we've got you covered.</p><ul><li>Contemplate the universe and get mildly existential</li><li>Organize your phone photos by color (weirdly satisfying)</li><li>Write a poem so bad it's funny</li><li>Watch YouTube essay videos about random topics</li><li>Try a Wikipedia spiral - click random and see where you end up</li><li>Listen to lo-fi beats and pretend you're in a study session</li></ul>"
-        },
-        home: {
-            title: "🏠 Things to Do When Bored at Home",
-            text: "<p>Being stuck at home doesn't have to be boring. Here's how to kill time without leaving your couch:</p><ul><li>Stare at the clock and watch time pass (oddly hypnotic)</li><li>Sort your apps by color, then size, then regret it</li><li>Read the strangest Amazon 1-star reviews</li><li>Explore Google Maps street view places you'll never visit</li><li>Make playlists for fictional moods you don't have</li><li>Go through old photos and rate them 1-10</li></ul>"
-        },
-        money: {
-            title: "💰 What to Do When Bored and Have No Money",
-            text: "<p>Zero budget? No problem. The best boredom busters are free:</p><ul><li>Challenge yourself to not blink for 60 seconds (you'll fail)</li><li>Learn to juggle with anything—scarves, socks, your phone (carefully)</li><li>Write a text to someone but don't send it (emotional release)</li><li>Make up a new sport with invented rules</li><li>Rate every photo in your camera roll</li><li>Invent conspiracy theories about your houseplants</li></ul>"
-        },
-        teen: {
-            title: "👶 What to Do When Bored as a Teenager",
-            text: "<p>Being a teenager with nothing to do is a universal experience. Here's how to survive:</p><ul><li>Scroll Reddit's most controversial posts</li><li>Create a meme about your exact current situation</li><li>Text your friends weird things and see who responds</li><li>Watch 'try not to laugh' compilations (you will fail)</li><li>Change your profile picture to something random</li><li>Deep dive into obscure Subreddits with under 100 members</li></ul>"
-        },
-        lateNight: {
-            title: "🌙 Fun Things to Do at 2am When You Can't Sleep",
-            text: "<p>2am and wide awake? The world is your oyster (or your oyster of existential dread):</p><ul><li>Listen to lo-fi beats and pretend you're in a study session</li><li>Google 'what would happen if' questions</li><li>Watch cooking videos you'll never cook</li><li>Think about your hypothetical other life in another country</li><li>Look up at the ceiling and name the stains</li><li>Let Spotify's autoplay take you on a musical journey</li></ul>"
-        },
-        interactive: {
-            title: "🎮 Interactive Boredom Busters",
-            text: "<p>Want more than just ideas? BoredomSolver has built-in games and challenges:</p><ul><li>Press the big 'I'm Bored' button for instant random activities</li><li>Try the Stay Challenge—see how long you can last on the site</li><li>Play Tic-Tac-Toe against our bot</li><li>Take the 15-second Brain Sprint challenge</li><li>Play Memory Match and test your brain</li><li>Accept daily chaos challenges</li></ul>"
-        }
-    };
-    
-    function showSeoContent(key) {
-        document.getElementById('seoTitle').textContent = seoData[key].title;
-        document.getElementById('seoText').innerHTML = seoData[key].text;
+    function showSeoTab(key) {
+        document.querySelectorAll('.seo-section').forEach(s => s.style.display = 'none');
+        document.querySelectorAll('.seo-tabs .filter-chip').forEach(b => b.classList.remove('active'));
+        document.getElementById('seoTab-' + key).style.display = 'block';
+        event.target.classList.add('active');
     }
     </script>
 
